@@ -28,7 +28,7 @@ Two code-log pairs can be generated from the above function, which are:
 a)  
 
 
-public void catchexception() {:triangular_flag_on_post:try {:triangular_flag_on_post:operation 1;:triangular_flag_on_post:operation 2;:triangular_flag_on_post:} catch (exception1 e1) {
+public void catchexception() {    try {    operation 1;    operation 2;    } catch (exception1 e1) {
 
 exception 1 happens
 
