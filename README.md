@@ -1,6 +1,7 @@
 # Characterizing the Natural Language Descriptions in Software Logging Statements 
 ## (ASE Paper Submission #217)
 
+
 Each pair is extracted from a single function and composed of two parts, the first part is a logging statement with some descriptive texts, while the second part is the corresponding previous at most 10 code lines.
 
 A concrete example is shown as follows:
@@ -25,7 +26,7 @@ try {
 (To simplify the demonstration, we focus only on former 6 code lines)
 Two code-log pairs can be generated from the above function, which are:
 
-1)  
+* **Sample 1:**  
 Code Text:
 <pre>
 public void catchexception() {     try {     operation 1;     operation 2;     } catch (exception1 e1) {
@@ -35,7 +36,8 @@ Logging Description:
 <pre>
 exception 1 happens
 </pre>
-2)
+
+* **Sample 2:**
 Code Text:
 <pre>
 operation 2;     } catch (exception1 e1) {     } catch (exception2 e2) {     logger.error(e2);     } catch (exception3 e3) {
