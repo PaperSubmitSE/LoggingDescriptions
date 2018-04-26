@@ -1,4 +1,5 @@
-# WhatToLog
+# Characterizing the Natural Language Descriptions in Software Logging Statements 
+## (ASE Paper Submission #217)
 
 Each pair is extracted from a single function and composed of two parts, the first part is a logging statement with some descriptive texts, while the second part is the corresponding previous at most 10 code lines.
 
@@ -21,11 +22,14 @@ try {
 }
 ```
 
-(Tosimplify the demonstration, we focus only on former 6 code lines)
+(To simplify the demonstration, we focus only on former 6 code lines)
 Two code-log pairs can be generated from the above function, which are:
 
 a)  
-public void catchexception() {	try {operation 1;	operation 2;	}	catch (exception1 e1) {  
+
+
+public void catchexception() {:triangular_flag_on_post:try {:triangular_flag_on_post:operation 1;:triangular_flag_on_post:operation 2;:triangular_flag_on_post:} catch (exception1 e1) {
+
 exception 1 happens
 
 b)  
