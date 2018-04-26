@@ -2,24 +2,26 @@
 
 Each pair is extracted from a single function and composed of two parts, the first part is a logging statement with some descriptive texts, while the second part is the corresponding previous at most 10 code lines.
 
-A concrete example is shown as follows (to simplify demonstration, we focus only on former 6 code lines):
+A concrete example is shown as follows:
 ```java
-	public	void catchException() {
-    	try {
-			operation 1;
-		  	operation 2;
+public	void catchException() {
+try {
+		operation 1;
+		operation 2;
 
-	  	} catch (Exception1 e1) {
-		  	LOGGER.error("Exception 1 happens", e1);
+	} catch (Exception1 e1) {
+		LOGGER.error("Exception 1 happens", e1);
 
-	  	} catch (Exception2 e2) {
-		  	LOGGER.error(e2);
+	} catch (Exception2 e2) {
+		LOGGER.error(e2);
 
-	  	} catch (Exception3 e3) {
-		  	LOGGER.error("Exception 3 happens", e3);
-	  	}
+	} catch (Exception3 e3) {
+		LOGGER.error("Exception 3 happens", e3);
 	}
+}
 ```
+
+(Tosimplify the demonstration, we focus only on former 6 code lines)
 Two code-log pairs can be generated from the above function, which are:
 
 a)  
