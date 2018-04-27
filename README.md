@@ -17,17 +17,17 @@ The repository contains _<code, log>_ pairs that are extracted from 10 Java proj
 | 09  |Synapse		|		|
 | 10  |Ignite  		| 		|
 
-Details including project description, version, LOC, # of Logs, etc can be found in the submitted paper
+Details including project description, version, LOC, # of Logs, etc can be found in the submitted paper.
 
 ## Data Extraction
 In the paper, each _<code, log>_  pair is extracted from a single function and composed of two parts: the code text and the logging description. The code text contains 10 lines (if it has) of code statements preceeding the studied logging statement. The logging description contains the descriptive text in the studied logging statement. Non-description parts such as variables are removed.
 
 Processing Details:
-1. All empty lines are skipped;
-2. All English characters are converted to their lower cases;
-3. In code text part, code lines are separeted by \tab;
+1. All empty lines are skipped.
+2. All English characters are converted to their lower cases.
+3. In code text part, code lines are separeted by \tab.
 4. Log statements that do not contain any description text are not considered as logging descriptions in this dataset. Instead, we regard this type of logging statement as an ordinary code line.
-5. The extracted preceeding 10 lines of code statements cannot exceed current function scope. (See the following example for details)
+5. The extracted preceeding 10 lines of code statements cannot exceed current function scope (See the following example for details).
 
 ## A Simplified Example 
 For easy demonstration, in the following Java example, we only extract **6 lines** of code insteaed of 10 for the code text part.
