@@ -50,7 +50,7 @@ try {
 }
 ```
 
-In this function, two _<code, log>_ pairs can be extracted (\Tab indicates new lines of code statement):
+In this function, two _<code, log>_ pairs can be extracted (\tab indicates new lines of code statement):
 
 * **_<code, log>_ pair 1:**
 
