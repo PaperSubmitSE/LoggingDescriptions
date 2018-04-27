@@ -1,7 +1,25 @@
 # Characterizing the Natural Language Descriptions in Software Logging Statements 
 ## (ASE Paper Submission #217)
 
+## Code-Log Project List
+The repository contains <code, log> pairs that are extracted from 10 Java projects and 7 C# projects. The projects are listed as follows:
 
+| No | Java Projects        | C# Projects            |  
+| :------:|:-------------: |:-------------:|
+| 01  |ActiveMQ		|Azure SDK	|
+| 02  |Ambari		|CoreRT		|
+|  03 |Brooklyn		|CoreFX		|
+|  04 |Camel      	|Mono		|
+|  05 |CloudStack 	|MonoDevelop	|
+|  06 |Hadoop    	|Orleans	|
+|  07 |Hbase     	|SharpDevelop	|
+|  08 |Hive		|		|
+| 09  |Synapse		|		|
+| 10  |Ignite  		| 		|
+
+Details including project description, version, LOC, # of Logs, etc can be found in the submitted paper
+
+## Data Extraction Pipeline
 Each pair is extracted from a single function and composed of two parts, the first part is a logging statement with some descriptive texts, while the second part is the corresponding previous at most 10 code lines.
 
 A concrete example is shown as follows:
