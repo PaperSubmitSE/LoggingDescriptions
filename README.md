@@ -20,9 +20,18 @@ The repository contains _<code, log>_ pairs that are extracted from 10 Java proj
 Details including project description, version, LOC, # of Logs, etc can be found in the submitted paper
 
 ## Data Extraction Pipeline
-Each _<code, log>_  pair is extracted from a single function and composed of two parts, the first part is a logging statement with some descriptive texts, while the second part is the corresponding previous at most 10 code lines.
+In the paper, each _<code, log>_  pair is extracted from a single function and composed of two parts: the code text and the logging description. The code text contains 10 lines (if it has) of code statements preceeding the studied logging statement. The logging description contains the descriptive text in the studied logging statement. Non-description parts such as variables are removed.
 
-A concrete example is shown as follows:
+Some remarks:
+1. All empty lines are skipped;
+2. All English characters are converted to their lower cases;
+3. In code part, code lines are separeted by tab character;
+4. Logging statement "LOGGER.error(e2);" can not produce a pair since it does not contain any descriptive text, only a variable. This kind of statement is treated as a normal code line, see example b, while others with descriptive text will not appear in the code part of any pairs, see example a;
+5. The scope of consideration is a single function, so in example a, even its code part contains only 5 (<6) code lines, it will only include code outside the function.
+
+### A Simplified Example 
+For easy demonstration, in the following Java example, we only extract 6 lines of code insteaed of 10 for the code text part.
+
 ```java
 public	void catchException() {
 try {
@@ -41,10 +50,9 @@ try {
 }
 ```
 
-(To simplify the demonstration, we focus only on former 6 code lines)
-Two _<code, log>_ pairs can be generated from the above function, which are:
+In this function, two _<code, log>_ pairs can be extracted (\Tab represents new lines of code statement):
 
-* **Sample 1:**
+* **_<code, log>_ pair 1:**
 
 Code Text:
 <pre>
@@ -56,7 +64,7 @@ Logging Description:
 exception 1 happens
 </pre>
 
-* **Sample 2:**
+* **_<code, log>_ pair 2:**
 
 Code Text:
 <pre>
@@ -67,10 +75,3 @@ Logging Description:
 <pre>
 exception 3 happens
 </pre>
-
-Some remarks:
-1. All empty lines are skipped;
-2. All English characters are converted to their lower cases;
-3. In code part, code lines are separeted by tab character;
-4. Logging statement "LOGGER.error(e2);" can not produce a pair since it does not contain any descriptive text, only a variable. This kind of statement is treated as a normal code line, see example b, while others with descriptive text will not appear in the code part of any pairs, see example a;
-5. The scope of consideration is a single function, so in example a, even its code part contains only 5 (<6) code lines, it will only include code outside the function.
