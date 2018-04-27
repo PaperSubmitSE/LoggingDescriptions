@@ -77,5 +77,9 @@ exception 3 happens
 </pre>
 
 #### Further Explanation:
-1. Logging statement "LOGGER.error(e2);" can not produce a _<code, log>_ pair since it does not contain any descriptive text except a variable. This kind of statement is treated as an ordinary code line, see **_<code, log>_ pair 2:**, while others with descriptive text will not appear in the code part of any pairs, see **_<code, log>_ pair 1:**.
-2. In **_<code, log>_ pair 1:**, the code text contains only 5 (<6) code lines, but it will not include code outside the function.
+1. Logging statement "LOGGER.error(e2);" can not produce a _<code, log>_ pair since it does not contain any descriptive text except a variable. This kind of statement is treated as an ordinary code line, see **_<code, log>_ pair 2**, while others with descriptive text will not appear in the code part of any pairs, see **_<code, log>_ pair 1**.
+2. In **_<code, log>_ pair 1**, the code text contains only 5 (<6) code lines, but it will not include code outside the function.
+
+
+## License
+All datasets in this repository will follow the MIT license for free reuse.
