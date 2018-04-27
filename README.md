@@ -1,8 +1,8 @@
 # Characterizing the Natural Language Descriptions in Software Logging Statements 
-## (ASE Paper Submission #217)
+## (_ASE Paper Submission #217_)
 
 ## Code-Log Project List
-The repository contains <code, log> pairs that are extracted from 10 Java projects and 7 C# projects. The projects are listed as follows:
+The repository contains _<code, log>_ pairs that are extracted from 10 Java projects and 7 C# projects. The projects are listed as follows:
 
 | No | Java Projects        | C# Projects            |  
 | :------:|:-------------: |:-------------:|
@@ -20,7 +20,7 @@ The repository contains <code, log> pairs that are extracted from 10 Java projec
 Details including project description, version, LOC, # of Logs, etc can be found in the submitted paper
 
 ## Data Extraction Pipeline
-Each pair is extracted from a single function and composed of two parts, the first part is a logging statement with some descriptive texts, while the second part is the corresponding previous at most 10 code lines.
+Each _<code, log>_  pair is extracted from a single function and composed of two parts, the first part is a logging statement with some descriptive texts, while the second part is the corresponding previous at most 10 code lines.
 
 A concrete example is shown as follows:
 ```java
@@ -42,7 +42,7 @@ try {
 ```
 
 (To simplify the demonstration, we focus only on former 6 code lines)
-Two code-log pairs can be generated from the above function, which are:
+Two _<code, log>_ pairs can be generated from the above function, which are:
 
 * **Sample 1:**
 
