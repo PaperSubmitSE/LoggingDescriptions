@@ -19,18 +19,18 @@ The repository contains _<code, log>_ pairs that are extracted from 10 Java proj
 
 Details including project description, version, LOC, # of Logs, etc can be found in the submitted paper
 
-## Data Extraction Pipeline
+## Data Extraction
 In the paper, each _<code, log>_  pair is extracted from a single function and composed of two parts: the code text and the logging description. The code text contains 10 lines (if it has) of code statements preceeding the studied logging statement. The logging description contains the descriptive text in the studied logging statement. Non-description parts such as variables are removed.
 
-Some remarks:
+Processing Details:
 1. All empty lines are skipped;
 2. All English characters are converted to their lower cases;
-3. In code part, code lines are separeted by tab character;
-4. Logging statement "LOGGER.error(e2);" can not produce a pair since it does not contain any descriptive text, only a variable. This kind of statement is treated as a normal code line, see example b, while others with descriptive text will not appear in the code part of any pairs, see example a;
-5. The scope of consideration is a single function, so in example a, even its code part contains only 5 (<6) code lines, it will only include code outside the function.
+3. In code text part, code lines are separeted by \tab;
+4. Log statements that do not contain any description text are not considered as logging descriptions in this dataset. Instead, we regard this type of logging statement as an ordinary code line.
+5. The extracted preceeding 10 lines of code statements cannot exceed current function scope. (See the following example for details)
 
-### A Simplified Example 
-For easy demonstration, in the following Java example, we only extract 6 lines of code insteaed of 10 for the code text part.
+## A Simplified Example 
+For easy demonstration, in the following Java example, we only extract **6 lines** of code insteaed of 10 for the code text part.
 
 ```java
 public	void catchException() {
@@ -50,7 +50,7 @@ try {
 }
 ```
 
-In this function, two _<code, log>_ pairs can be extracted (\Tab represents new lines of code statement):
+In this function, two _<code, log>_ pairs can be extracted (\Tab indicates new lines of code statement):
 
 * **_<code, log>_ pair 1:**
 
@@ -75,3 +75,7 @@ Logging Description:
 <pre>
 exception 3 happens
 </pre>
+
+#### Further Explanation:
+1. Logging statement "LOGGER.error(e2);" can not produce a _<code, log>_ pair since it does not contain any descriptive text except a variable. This kind of statement is treated as an ordinary code line, see **_<code, log>_ pair 2:**, while others with descriptive text will not appear in the code part of any pairs, see **_<code, log>_ pair 1:**.
+2. In **_<code, log>_ pair 1:**, the code text contains only 5 (<6) code lines, but it will not include code outside the function.
