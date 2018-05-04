@@ -1,14 +1,20 @@
 static void main() {	
 hello world 
 
+========================= corert sample_1685 =========================
+
 private static void main(string[] args) {	if (args.length == 0) {	
 usage hello name 
 
 private static void main(string[] args) {	if (args.length == 0) {	return;	}	
 hello 
 
+========================= corert sample_11 =========================
+
 public static void compilemethod(webassemblycodegencompilation compilation, webassemblymethodcodenode methodcodenodeneedingcode) {	methoddesc method = methodcodenodeneedingcode.method;	if (compilation.logger.isverbose) {	string methodname = method.tostring();	
 compiling 
+
+========================= corert sample_1633 =========================
 
 public static int main() {	if (string.empty.length > 0) {	new bringuptest().tostring();	}	int counter = 0;	try {	try {	throw new exception("my exception");	}	catch (outofmemoryexception) {	
 unexpected exception caught 
@@ -49,6 +55,8 @@ executing finally in
 static void throwexcthroughmethodswithfinalizers2(string caller) {	createsomegarbage();	string s = caller + " + throwexcthroughmethodswithfinalizers2";	createsomegarbage();	try {	throw new exception("throwexcthroughmethodswithfinalizers2");	}	finally {	
 executing finally in 
 
+========================= corert sample_8 =========================
+
 public static int main() {	int result = pass;	if (!testvaluetypedelegates()) {	
 failed 
 
@@ -84,6 +92,8 @@ ok
 
 var args = new object[] { (intptr)8 };	bool caught = false;	try {	d.dynamicinvoke(args);	}	catch (argumentexception) {	caught = true;	}	if (!caught) return false;	}	
 ok 
+
+========================= corert sample_10 =========================
 
 public void emitsource() {	
 pragma warning disable 
@@ -229,8 +239,12 @@ return new handle handle value
 }	closescope($"get{record.name}");	}	foreach (var record in schemadef.recordschema) {	openscope($"internal handle tohandle({record.name}handle handle)");	closescope("tohandle");	}	foreach (var record in schemadef.recordschema) {	string handlename = $"{record.name}handle";	openscope($"internal {handlename} to{handlename}(handle handle)");	
 return new handlename handle value 
 
+========================= corert sample_1781 =========================
+
 public int emitsymbolreference(isymbolnode target, int delta, reloctype reloctype) {	string realsymbolname = getbasesymbolname(target, _nodefactory.namemangler, true);	if (realsymbolname == null) {	
 unable to generate symbolref to 
+
+========================= corert sample_1636 =========================
 
 public void emitsource() {	
 pragma warning disable 
@@ -295,11 +309,17 @@ foreach typename value in values
 private void emitwritearray(string typename) {	openscope($"public static void write(this nativewriter writer, list<{typename}> values)");	writeline("if (values == null)");	writeline("{");	writeline("}");	writeline("{");	
 writer write value 
 
+========================= corert sample_1785 =========================
+
 static void main() {	
 hello world 
 
+========================= corert sample_2530 =========================
+
 if (i != 0) _tw.write(", ");	_tw.write(fmt.formatname(owningmethod.instantiation[i]));	}	_tw.write(">");	}	_tw.write("(");	for (int i = 0; i < owningmethod.signature.length; i++) {	if (i != 0) _tw.write(", ");	_tw.write(fmt.formatname(owningmethod.signature[i]));	}	
 cil managed 
+
+========================= corert sample_1324 =========================
 
 }	memoryneeded = memoryneeded.alignup(type.typeinstancefieldalignment);	memoryneeded += type.typeinstancefieldsize;	}	memoryneeded = memoryneeded.alignup(intptr.size);	return memoryneeded;	}	#if ccconverter_trace public unsafe void dumpdebuginfo() {	typesystemcontext context = typesystemcontextfactory.create();	{	
 localvariableset 
@@ -349,6 +369,8 @@ copy bytes from to
 public static unsafe void makedynamiccall(intptr address, dynamiccallsignature callsignature, localvariableset arguments) {	
 makedynamiccall executing 
 
+========================= corert sample_1264 =========================
+
 syntax.defineoption("ildump", ref _ildump, "dump il assembly listing for compiler-generated il");	syntax.defineoption("stacktracedata", ref _emitstacktracedata, "emit data to support generating stack trace strings at runtime");	syntax.defineoption("targetarch", ref _targetarchitecturestr, "target architecture for cross compilation");	syntax.defineoption("targetos", ref _targetosstr, "target os for cross compilation");	syntax.defineoption("singlemethodtypename", ref _singlemethodtypename, "single method compilation: name of the owning type");	syntax.defineoption("singlemethodname", ref _singlemethodname, "single method compilation: name of the method");	syntax.defineoptionlist("singlemethodgenericarg", ref _singlemethodgenericargs, "single method compilation: generic arguments to the method");	syntax.defineparameterlist("in", ref inputfiles, "input file(s) to compile");	});	if (waitfordebugger) {	
 waiting for debugger to attach press enter to continue 
 
@@ -364,6 +386,8 @@ to repro add following arguments to the command line
 #if debug try {	return new program().run(args);	}	catch (codegenerationfailedexception ex) when (dumpreproarguments(ex)) {	throw new notsupportedexception();	}	#else try {	return new program().run(args);	}	catch (exception e) {	
 error 
 
+========================= corert sample_2534 =========================
+
 public void addexportedmethods(ienumerable<ecmamethod> methods) => _methods.addrange(methods.where(m => m.module != _context.systemmodule));	public void emitexportedmethods() {	filestream filestream = new filestream(_exportsfile, filemode.create);	using (streamwriter streamwriter = new streamwriter(filestream)) {	if (_context.target.iswindows) {	
 exports 
 
@@ -372,6 +396,8 @@ method getnativecallableexportname
 
 public void addexportedmethods(ienumerable<ecmamethod> methods) => _methods.addrange(methods.where(m => m.module != _context.systemmodule));	public void emitexportedmethods() {	filestream filestream = new filestream(_exportsfile, filemode.create);	using (streamwriter streamwriter = new streamwriter(filestream)) {	if (_context.target.iswindows) {	}	else {	
 method getnativecallableexportname 
+
+========================= corert sample_1314 =========================
 
 testwithstruct(new mystruct2(), new mystruct2(), new mystruct2());	console.writeline("====================");	s_ifoostring = "mystruct3.imethod1<system.int32>(1,2)";	s_ifooobject = "mystruct3.imethod1<system.int32>(3,4)";	s_ifooint = "mystruct3.ifoo<int>.imethod1<system.int32>(5,6)";	testwithstruct(new mystruct3(), new mystruct3(), new mystruct3());	console.writeline("====================");	}	{	string res = ((iface<string>)new anotherderivedclass<string>()).ifacegvmethod1<string>("string1", "string2");	
 anotherbaseclass 
@@ -415,11 +441,15 @@ testing instance fields on type foo structtype
 verify("3434", (string)fi.getvalue(foostructtype));	fi = typeof(foo<structtype>).gettypeinfo().getdeclaredfield("m_floatfield");	verify(45.45f, (float)fi.getvalue(foostructtype));	fi = typeof(foo<structtype>).gettypeinfo().getdeclaredfield("m_objectfield");	verify("5656", fi.getvalue(foostructtype));	typeof(foo<structtype>).gettypeinfo().getdeclaredfield("m_stringfield").setvalue(foostructtype, "thisisastring9");	typeof(foo<structtype>).gettypeinfo().getdeclaredfield("m_objectfield").setvalue(foostructtype, "thisisastring10");	verify("thisisastring9", (string)foostructtype.m_stringfield);	verify("thisisastring10", (string)foostructtype.m_objectfield);	}	
 testing instance fields on type bar 
 
+========================= corert sample_2 =========================
+
 public bool trygetgenericvirtualtargetfortypeandslot(runtimetypehandle targethandle, ref runtimetypehandle declaringtype, runtimetypehandle[] genericarguments, ref string methodname, ref runtimesignature methodsignature, out intptr methodpointer, out intptr dictionarypointer, out bool slotupdated) {	methodnameandsignature methodnameandsignature = new methodnameandsignature(methodname, methodsignature);	
 gvm resolution starting for on a target of type 
 
 for (uint l = 0; l < numifacesigs; l++) entryparser.getunsigned();	continue;	}	for (uint l = 0; l < numifacesigs; l++) {	runtimetypehandle currentifacetypehandle = default(runtimetypehandle);	nativeparser ifacesigparser = new nativeparser(nativelayoutreader, extrefs.getexternalnativelayoutoffset(entryparser.getunsigned()));	if (typeloaderenvironment.instance.gettypefromsignatureandcontext(ref ifacesigparser, module.handle, targettypeinstantiation, null, out currentifacetypehandle)) {	#if gvm_resolution_trace debug.writeline("         -> current interface on type = " + gettypenamedebug(currentifacetypehandle));	#endif debug.assert(!currentifacetypehandle.isnull());	if ((!variantdispatch && declaringtype.equals(currentifacetypehandle)) || (variantdispatch && runtimeaugments.isassignablefrom(declaringtype, currentifacetypehandle))) {	
 exact variant compatible match found on this target type 
+
+========================= corert sample_1221 =========================
 
 private static void testblittabletype() {	
 testing marshalling blittable types 
@@ -466,6 +496,8 @@ testing delegate
 private static void teststruct() {	
 testing structs 
 
+========================= corert sample_3 =========================
+
 nativehashtable typetemplateshashtable = loadhashtable(moduleinfo.handle, reflectionmapblob.metadatabasedtypetemplatemap, out externalfixupstable);	if (typetemplateshashtable.isnull) continue;	var enumerator = typetemplateshashtable.lookup(hashcode);	var nativemetadataunit = nativemetadatatype.context.resolvemetadataunit(moduleinfo);	nativeparser entryparser;	while (!(entryparser = enumerator.getnext()).isnull) {	var entrytypehandle = entryparser.getunsigned().ashandle();	typedesc typedesc = nativemetadataunit.gettype(entrytypehandle);	debug.assert(typedesc != null);	if (typedesc == canonform) {	
 found metadata template for type 
 
@@ -490,8 +522,12 @@ error template not fixed up skipping
 nativelayoutinfomodule = moduleinfo;	nativelayoutinfotoken = (uint)externalfixupstable.getexternalnativelayoutoffset(entryparser.getunsigned());	if (nativelayoutinfotoken == badtokenfixupvalue) {	continue;	}	debug.assert( (kind != canonicalformkind.universal) || (kind == canonicalformkind.universal && candidatetemplate == candidatetemplate.getcanonmethodtarget(kind)));	return candidatetemplate;	}	}	}	
 error cannot find a suitable template for generic method 
 
+========================= corert sample_1220 =========================
+
 private static void main(string[] args) {	
 hello world 
+
+========================= corert sample_2531 =========================
 
 public void compilemethod(cppmethodcodenode methodcodenodeneedingcode) {	methoddesc method = methodcodenodeneedingcode.method;	if (_compilation.logger.isverbose) {	string methodname = method.tostring();	
 compiling 
@@ -501,6 +537,8 @@ include
 
 sb.append("(");	appendcppmethodcallparamlist(sb, unboxingstubnode.method, true);	sb.append(");");	sb.exdent();	sb.appendline();	sb.append("}");	out.write(sb.tostring());	}	public void outputcode(ienumerable<dependencynode> nodes, nodefactory factory) {	buildmethodlists(nodes);	
 include 
+
+========================= corert sample_2069 =========================
 
 public static int run() {	int iterationcount = 0;	while (!visited && iterationcount++ < 10000) {	gc.keepalive(new dummy());	gc.collect();	}	if (visited) {	
 finalizetest passed 
@@ -523,6 +561,8 @@ the timer test failed failed to change the existing timer
 timerfired = s_event.waitone(timespan.fromseconds(5));	if (!timerfired) {	return program.fail;	}	s_periodictimercount = 0;	s_event.reset();	s_timer = new timer(periodictimercallback, null, 200, 20);	while (s_periodictimercount < 3) {	timerfired = s_event.waitone(timespan.fromseconds(5));	if (!timerfired) {	
 the timer test failed the periodic timer has not fired 
 
+========================= corert sample_7 =========================
+
 public void emitsource() {	
 using system 
 
@@ -534,6 +574,8 @@ using system collections generic
 
 public void emitsource() {	writeline();	
 pragma warning disable writeline pragma warning disable writeline 
+
+========================= corert sample_1788 =========================
 
 public static int main(string[] args) {	int result = pass;	if (!testpreinitprimitivedata()) {	
 failed 
@@ -565,6 +607,8 @@ testing preinitialized method array
 static bool testotherstatics() {	
 testing other statics work well with preinitialized data in the same type 
 
+========================= corert sample_4 =========================
+
 public static int teststaticbases() {	
 testing static bases in library code are available 
 
@@ -577,14 +621,20 @@ testing thread statics on generic types shared between modules are shared proper
 public static int testinjectedenummethods() {	
 testing context injected methods on enums 
 
+========================= corert sample_5 =========================
+
 dictionary.add(simplename, fullfilename);	}	empty = false;	}	}	if (empty) {	if (strict) {	throw new commandlineexception("no files matching " + pattern);	}	else {	
 warning no files matching 
+
+========================= corert sample_1799 =========================
 
 foreach (dependencynodecore<nodefactory> dependency in obj) {	var methodcodenodeneedingcode = dependency as methodcodenode;	if (methodcodenodeneedingcode == null) {	var dependencymethod = (shadowconcretemethodnode)dependency;	methodcodenodeneedingcode = (methodcodenode)dependencymethod.canonicalmethodnode;	}	if (methodcodenodeneedingcode.staticdependenciesarecomputed) continue;	methoddesc method = methodcodenodeneedingcode.method;	if (logger.isverbose) {	string methodname = method.tostring();	
 compiling 
 
 methoddesc method = methodcodenodeneedingcode.method;	if (logger.isverbose) {	string methodname = method.tostring();	}	try {	_corinfo.compilemethod(methodcodenodeneedingcode);	}	catch (typesystemexception ex) {	methodil throwingil = typesystemthrowingilemitter.emitil(method, ex);	_corinfo.compilemethod(methodcodenodeneedingcode, throwingil);	
 warning method method will always throw because ex message 
+
+========================= corert sample_1356 =========================
 
 process.start();	task copyoutput = process.standardoutput.basestream.copytoasync(outputstream);	task copyerror = process.standarderror.basestream.copytoasync(errorstream);	bool completed = process.waitforexit(timeout);	copyoutput.wait(timeout);	copyerror.wait(timeout);	if (completed) {	exitcode = process.exitcode;	}	else {	
 cmdline timed out 
@@ -595,8 +645,12 @@ cmdline timed out
 task copyoutput = process.standardoutput.basestream.copytoasync(outputstream);	task copyerror = process.standarderror.basestream.copytoasync(errorstream);	bool completed = process.waitforexit(timeout);	copyoutput.wait(timeout);	copyerror.wait(timeout);	if (completed) {	exitcode = process.exitcode;	}	else {	}	
 test harness exitcode is 
 
+========================= corert sample_1 =========================
+
 ienumerable<metadatarecord> records = _visitor.graph.vertices.where(v => v != _visitor.metasourcevertex);	var writer = new nativewriter();	var section = writer.newsection();	_metadataheader.scopedefinitions = scopedefinitions;	section.place(_metadataheader);	foreach (var rec in records) {	section.place(rec);	}	writer.save(stream);	if (logwriter != null) {	
 handle kind name children 
+
+========================= corert sample_2467 =========================
 
 itfs[48] = new foo48();	itfs[49] = new foo49();	stringbuilder sb = new stringbuilder();	int counter = 0;	for (int i = 0; i < 50; i++) {	sb.append(itfs[i].getastring());	counter += itfs[i].getanint();	}	string expected = "foo0foo1foo2foo3foo4foo5foo6foo7foo8foo9foo10foo11foo12foo13foo14foo15foo16foo17foo18foo19foo20foo21foo22foo23foo24foo25foo26foo27foo28foo29foo30foo31foo32foo33foo34foo35foo36foo37foo38foo39foo40foo41foo42foo43foo44foo45foo46foo47foo48foo49";	if (!expected.equals(sb.tostring())) {	
 concatenating strings from interface calls failed 
@@ -634,6 +688,8 @@ testing ilist on mdarray
 object stringarray = new string[] { "a", "b", "c", "d" };	string result = string.empty;	foreach (var s in (system.collections.ienumerable)stringarray) result += s;	if (result != "abcd") {	return fail;	}	}	{	object intarray = new int[5, 5];	if (((system.collections.ilist)intarray).count != 25) {	
 failed 
 
+========================= corert sample_13 =========================
+
 public void registerforpreparation(typedesc type) {	
 register for preparation 
 
@@ -664,8 +720,12 @@ building floating dictionary layout for type
 nlilcontext = state.nativelayoutinfo.loadcontext;	}	else {	runtimetypehandle declaringtypehandle;	methodnameandsignature nameandsignature;	runtimetypehandle[] genericmethodarghandles;	bool success = typeloaderenvironment.instance.trygetgenericmethodcomponents(context, out declaringtypehandle, out nameandsignature, out genericmethodarghandles);	debug.assert(success);	deftype declaringtype = (deftype)typesystemcontext.resolveruntimetypehandle(declaringtypehandle);	instantiatedmethod methodcontext = (instantiatedmethod)typesystemcontext.resolvegenericmethodinstantiation( false, declaringtype, nameandsignature, typesystemcontext.resolveruntimetypehandles(genericmethodarghandles), intptr.zero, false);	
 building floating dictionary layout for method 
 
+========================= corert sample_1239 =========================
+
 public static void runtimefailfast(rhfailfastreason reason, exception exception, intptr pexaddress, intptr pexcontext) {	try {	if (!safetoperformrichexceptionsupport) return;	bool minimalfailfast = infailfast.value || (exception is outofmemoryexception);	string failfastmessage = "";	if (!minimalfailfast) {	if ((reason == rhfailfastreason.pn_unhandledexception) && (exception != null)) {	
 unhandled exception 
+
+========================= corert sample_918 =========================
 
 public void emitsource() {	
 pragma warning disable 
@@ -712,8 +772,12 @@ handle validate
 private void emitread(string typename) {	openscope($"public static uint read(this nativereader reader, uint offset, out {typename} handle)");	writeline("offset = reader.decodeunsigned(offset, out value);");	writeline($"handle = new {typename}((int)value);");	
 return offset 
 
+========================= corert sample_1782 =========================
+
 private unsafe delegate void invoketargetdel(void* allocatedbuffer, ref callconversionparameters conversionparams);	[debuggerguidedstepthroughattribute]	unsafe private static intptr callconversionthunk(intptr callertransitionblockparam, intptr callconversionid) {	callconversionparameters conversionparams = default(callconversionparameters);	try {	conversionparams = new callconversionparameters(callconversioninfo.getconverter(callconversionid.toint32()), callertransitionblockparam);	#if ccconverter_trace system.threading.interlocked.increment(ref s_numconversionsexecuted);	callingconventionconverterlogger.writeline("callconversionthunk executing... count = " + s_numconversionsexecuted.lowleveltostring());	
 executing thunk of type 
+
+========================= corert sample_1229 =========================
 
 private void help(string helptext) {	
 ilverify version 
@@ -732,6 +796,8 @@ all classes and methods in verified
 
 private static int main(string[] args) {	try {	return new program().run(args);	}	catch (exception e) {	
 error 
+
+========================= corert sample_1687 =========================
 
 public void emitsource() {	
 pragma warning disable 
@@ -838,6 +904,8 @@ return new record name handle handleoffset
 closescope();	closescope("handle");	writelineifneeded();	foreach (var member in record.members) {	if ((member.flags & memberdefflags.notpersisted) != 0) continue;	string fieldtype = member.getmembertype(membertypekind.writerfield);	if ((member.flags & (memberdefflags.list | memberdefflags.map)) != 0) {	writeline($"public {fieldtype} {member.name} = new {fieldtype}();");	}	else {	
 public fieldtype member name 
 
+========================= corert sample_1786 =========================
+
 private computedstaticfieldlayout parsestaticregionsizesfromnativelayout(typedesc type) {	layoutint nongcdatasize = layoutint.zero;	layoutint gcdatasize = layoutint.zero;	layoutint threaddatasize = layoutint.zero;	typebuilderstate state = type.getorcreatetypebuilderstate();	nativeparser typeinfoparser = state.getparserfornativelayoutinfo();	bagelementkind kind;	while ((kind = typeinfoparser.getbagelementkind()) != bagelementkind.end) {	switch (kind) {	
 found bagelementkind nongcstaticdatasize 
 
@@ -847,6 +915,8 @@ found bagelementkind gcstaticdatasize
 layoutint threaddatasize = layoutint.zero;	typebuilderstate state = type.getorcreatetypebuilderstate();	nativeparser typeinfoparser = state.getparserfornativelayoutinfo();	bagelementkind kind;	while ((kind = typeinfoparser.getbagelementkind()) != bagelementkind.end) {	switch (kind) {	nongcdatasize = new layoutint(checked((int)typeinfoparser.getunsigned()));	break;	gcdatasize = new layoutint(checked((int)typeinfoparser.getunsigned()));	break;	
 found bagelementkind threadstaticdatasize 
 
+========================= corert sample_1248 =========================
+
 public override deftype[] computeruntimeinterfaces(typedesc type) {	typebuilderstate state = type.getorcreatetypebuilderstate();	int totalinterfaces = runtimeaugments.getinterfacecount(state.templatetype.runtimetypehandle);	typeloaderlogger.writeline("building runtime interfaces for type " + type.tostring() + " (total interfaces = " + totalinterfaces.lowleveltostring() + ") ...");	deftype[] interfaces = new deftype[totalinterfaces];	int numinterfaces = 0;	if (type.basetype != null) {	foreach (var baseinterface in type.basetype.runtimeinterfaces) {	debug.assert(!interfaceinset(interfaces, numinterfaces, baseinterface));	interfaces[numinterfaces++] = baseinterface;	
 added basetype interface on type 
 
@@ -855,6 +925,8 @@ added interface on type
 
 typedesc[] implementedinterfaces;	if (!interfaceparser.isnull) implementedinterfaces = state.nativelayoutinfo.loadcontext.gettypesequence(ref interfaceparser);	else implementedinterfaces = typedesc.emptytypes;	foreach (typedesc interfacetype in implementedinterfaces) {	deftype interfacetypeasdeftype = (deftype)interfacetype;	if (interfaceinset(interfaces, numinterfaces, interfacetypeasdeftype)) continue;	interfaces[numinterfaces++] = interfacetypeasdeftype;	foreach (var inheritedinterface in interfacetypeasdeftype.runtimeinterfaces) {	if (interfaceinset(interfaces, numinterfaces, inheritedinterface)) continue;	interfaces[numinterfaces++] = inheritedinterface;	
 added inherited interface on type 
+
+========================= corert sample_1249 =========================
 
 public static int main() {	
 waitsubsystemtests doublesetoneventwithtimedoutwaitershouldnotstayinwaiterslist 
@@ -955,6 +1027,8 @@ assertion failure assert null
 public static void notnull(object value) {	if (value != null) return;	
 assertion failure assert notnull 
 
+========================= corert sample_12 =========================
+
 }	if (currentparsemode == parsemode.returntypes) {	thunkreturntypes[t.thunktypename] = t;	}	break;	case parsemode.functions: functions.add(new functiondecl(currentline, thunkreturntypes, thunktypes));	break;	}	}	catch (exception e) {	
 error parsing line 
 
@@ -979,9 +1053,13 @@ generating
 static void main(string[] args) {	ienumerable<functiondecl> functions = parseinput(new streamreader(args[0]));	using (textwriter tw = new streamwriter(args[1])) {	writemanagedthunkinterface(tw, functions);	}	using (textwriter tw = new streamwriter(args[2])) {	
 generating 
 
+========================= corert sample_26 =========================
+
 public cswriter(string filename) {	_writer = new streamwriter(filename);	
 writer writeline writer writeline 
 
 public cswriter(string filename) {	_writer = new streamwriter(filename);	
 writer writeline 
+
+========================= corert sample_1783 =========================
 

@@ -1,6 +1,8 @@
 protected void bugclickedhandler(object sender, eventargs e) {	try {	copyinfotoclipboard();	string uritext = "http: uri uri = new uri(uritext);	utils.invokebrowser(uri, !utils.show_window);	} catch (exception ex) {	
 error sending bug report 
 
+========================= sharpdevelop sample_83 =========================
+
 _typelib = typelib;	if (name == null) {	comclassinfo clsinfo = typelib.getclassinfofromclsid(_guid);	name = clsinfo.name;	}	type type = typelib.findtypebyname(name, typelibrary.find_class);	if (type == null) {	_typefailedexception = new exception("clr type not found in " + _container + " for activex type " + this + ".\n\nthis is likely caused by " + "the assembly corresponding to " + "this type library not being " + "available.");	throw _typefailedexception;	}	
 comclassinfo type 
 
@@ -16,8 +18,12 @@ final marshal release count
 int count = marshal.releasecomobject(o);	if (count <= 0) break;	}	}	while (true) {	int count = marshal.release(comobj);	if (count <= 0) break;	}	}	catch (exception ex) {	
 error on cleanup 
 
+========================= sharpdevelop sample_70 =========================
+
 public static void dopaste(isolutionfoldernode foldernode) {	system.windows.idataobject dataobject = sd.clipboard.getdataobject();	if (!doenablepaste(foldernode.folder, dataobject)) {	
 solutionfoldernode dopaste pasting was not enabled 
+
+========================= sharpdevelop sample_5178 =========================
 
 methoddeclaration extensionmethod = new methoddeclaration();	extensionmethod.modifier = modifiers.public | modifiers.static;	extensionmethod.typereference = method.typereference;	extensionmethod.isextensionmethod = true;	if (string.isnullorempty(methodprefix)) {	extensionmethod.name = method.name;	} else if (method.name.startswith(methodprefix)) {	extensionmethod.name = method.name.substring(methodprefix.length);	} else {	extensionmethod.name = method.name;	
 warning is missing prefix 
@@ -25,11 +31,17 @@ warning is missing prefix
 }	}	}	csharpoutputvisitor csout = new csharpoutputvisitor();	csout.visitcompilationunit(generated, null);	string output = csout.text;	if (outputfile != null) {	file.writealltext(outputfile, output);	}	if (haswarnings) {	
 press any key to continue 
 
+========================= sharpdevelop sample_371 =========================
+
 public iviewcontent createcontentforfile(openedfile file) {	var viewcmd = new createdesignercommand(file);	viewcmd.run();	
 designerbinding designer started 
 
+========================= sharpdevelop sample_1545 =========================
+
 public tocentry(string id) {	this.id = id;	client.downloadstringcompleted += (_, e) => {	try {	
 helpviewer tocentry found 
+
+========================= sharpdevelop sample_1726 =========================
 
 public void setup(string title, string bodytext, int maxvalue, bool hasprogresstext, bool final) {	
 progress setup max 
@@ -40,17 +52,25 @@ setup final close
 _bodytext = bodytext;	_maxvalue = maxvalue;	_hasprogresstext = hasprogresstext;	_final = final;	if (controls.count > 0) {	_done = false;	_textbox.text = _bodytext;	_progress.value = 0;	_progress.maximum = _maxvalue;	if (_label != null) _label.text = "";	
 using existing controls 
 
+========================= sharpdevelop sample_184 =========================
+
 combobox.sorted = false;	combobox.drawitem += new drawitemeventhandler(comboboxdrawitem);	combobox.measureitem += new measureitemeventhandler(comboboxmeasureitem);	combobox.selectedindexchanged += new eventhandler(comboboxselectedindexchanged);	panel.controls.add(grid);	panel.controls.add(combobox);	sd.winforms.setcontent(contentcontrol, panel);	sd.projectservice.solutionclosed += solutionclosedevent;	grid.propertyvaluechanged += new propertyvaluechangedeventhandler(propertychanged);	grid.contextmenustrip = sd.winforms.menuservice.createcontextmenu(this, "/sharpdevelop/views/propertypad/contextmenu");	
 propertypad created 
 
 public void showhelp() {	
 show help on property pad 
 
+========================= sharpdevelop sample_5168 =========================
+
 public helpservice() {	
 create helpservice 
 
+========================= sharpdevelop sample_1561 =========================
+
 }	}	var appxamlxml = xmlreader.create(new stringreader(node.innerxml));	var appxamlcontext = new xamldesigncontext(appxamlxml, settings);	var dict = (resourcedictionary) appxamlcontext.rootitem.component;	designer.designpanel.resources.mergeddictionaries.add(dict);	}	}	}	catch (exception ex) {	
 error in loading app xaml 
+
+========================= sharpdevelop sample_2708 =========================
 
 dlgmsgservice.dialogsynchronizeinvoke = sd.mainthread.synchronizingobject;	dlgmsgservice.dialogowner = workbench.mainwin32window;	}	var applicationstateinfoservice = sd.getservice<applicationstateinfoservice>();	if (applicationstateinfoservice != null) {	applicationstateinfoservice.registerstategetter(activecontentstate, delegate { return sd.workbench.activecontent; });	}	workbenchsingleton.onworkbenchcreated();	navigationservice.initializeservice();	workbench.activecontentchanged += delegate {	
 activecontentchanged to 
@@ -73,11 +93,17 @@ activeworkbenchwindowchanged to
 public void run(ilist<string> filelist) {	bool didloadsolutionorfile = false;	navigationservice.suspendlogging();	foreach (string file in filelist) {	
 open file 
 
+========================= sharpdevelop sample_4628 =========================
+
 }	}	if (is64bit) logstring("using 64-bit hook.");	logstring("starting process, waiting for profiler hook...");	profilee = new process();	profilee.enableraisingevents = true;	profilee.startinfo = psi;	profilee.exited += new eventhandler(profileeexited);	enabledc = profileroptions.enabledcatstart;	isfirstdc = true;	
 launching profiler for 
 
+========================= sharpdevelop sample_2072 =========================
+
 rettype = elemdesc.tdesc;	limit--;	}	}	adddomparams(funcdesc, meth, limit);	}	if ((varenum)rettype.vt != varenum.vt_hresult) {	string typename = typelibutil.typedesctostring (_typelib, _typeinfo, rettype, !typelibutil.comtype);	if (typename.startswith("ref ")) typename = typename.substring(4);	if (traceutil.if(this, tracelevel.info)) {	
 cg return 
+
+========================= sharpdevelop sample_60 =========================
 
 public static void addcurrentassemblies() {	foreach (assembly assembly in appdomain.currentdomain.getassemblies()) {	if (!(localprefs.get(localprefs.dev) != null)) {	if (assembly.equals(assembly.getcallingassembly())) continue;	}	if (assembly.getname().name.equals(assemblysupport.dummy_assy_name)) continue;	try {	assemblytreenode node = addassy(assembly, null);	node.noclose = true;	} catch (exception ex) {	
 error adding local assembly 
@@ -109,8 +135,12 @@ assembly loaded
 module[] mods = args.loadedassembly.getmodules();	if (mods[0].name.equals("<unknown>")) return;	if (findassemblytreenode(args.loadedassembly) == null) {	assemblytreenode node = addassy(args.loadedassembly, null);	rememberassembly(args.loadedassembly, null, null);	_assyloadednode = node;	comsupport.assemblyloadhandler(args.loadedassembly, node);	}	}	} catch (exception ex) {	
 exception processing assy load event 
 
+========================= sharpdevelop sample_93 =========================
+
 private void events_packagemessagelogged(object sender, packagemessageloggedeventargs e) {	
 nugetpackagemanager 
+
+========================= sharpdevelop sample_1681 =========================
 
 public void attach(uint processid) {	if (_debug == null) init();	_activeprocess = _debug.debugactiveprocess(processid, 0);	icordebugthreadenum threads = _activeprocess.enumeratethreads();	uint count = 0;	count = threads.getcount();	
 thread count 
@@ -121,8 +151,12 @@ thread count
 public void attachdebuggedprocess(int processid) {	
 debug process 
 
+========================= sharpdevelop sample_201 =========================
+
 if (!string.isnullorempty(filename)) {	iproject p;	if (files.trygetvalue(filename, out p)) {	return p;	}	if ((p = getprojectforfileinternal(filename)) != null) {	files[filename] = p;	return p;	}	}	
 resourcetoolkit projectfiledictionary could not determine project for file null 
+
+========================= sharpdevelop sample_1575 =========================
 
 public void dodisplayvalue() {	columndata[0] = _objinfo.getstringvalue();	
 displayval 
@@ -136,14 +170,20 @@ searchfor obj found
 protected override browsertreenode allocatechildnode(object obj) {	if (_typehandler != null && _typehandler.enabled) return _typehandler.allocatechildnode((objectinfo)obj);	memberinfo member = (memberinfo)obj;	objectinfo objinfo = objectinfofactory.getobjectinfo(_comnode, member, objtype);	
 allocatechild member 
 
+========================= sharpdevelop sample_157 =========================
+
 public object builditem(builditemargs args) {	type providertype = args.addin.findtype(args.codon.properties["class"]);	if (providertype == null) return null;	var attributes = providertype.getcustomattributes(typeof(contextactionattribute), true);	if (attributes.length == 0) {	
 contextaction attribute is missing on 
 
 public object builditem(builditemargs args) {	type providertype = args.addin.findtype(args.codon.properties["class"]);	if (providertype == null) return null;	var attributes = providertype.getcustomattributes(typeof(contextactionattribute), true);	if (attributes.length == 0) {	return null;	}	if (!typeof(codeactionprovider).isassignablefrom(providertype)) {	
 does not implement codeactionprovider 
 
+========================= sharpdevelop sample_4063 =========================
+
 lock (syncroot) {	foreach (fileitem item in items) {	item.savechanges();	if (item.xmlelement.parentnode != null) item.xmlelement.parentnode.removechild(item.xmlelement);	}	foreach (fileitem item in items) {	filegroup group = groups.find(fg => fg.itemtype == item.projectitem.itemtype);	if (group != null) {	group.xmlelement.appendchild(item.xmlelement);	} else {	
 couldn t find filter for item type the item was not saved 
+
+========================= sharpdevelop sample_334 =========================
 
 helplibraryagent.start();	thread.sleep(0x3e8);	}	string helpurl = string.concat(arguments, projectlanguages.currentlanguageashttpparam, (embedded)?"&embedded=true":string.empty);	if (help3service.config.externalhelp) {	displayhelpwithshellexecute(helpurl);	return;	}	browserpane browser = activehelp3browser();	if (browser != null) {	
 helpviewer displaylocalhelp calls 
@@ -156,6 +196,8 @@ helpviewer displayhelponmsdn calls
 
 static void displaysearchonmsdn(string searchwords) {	if (string.isnullorempty(searchwords)) {	throw new argumentnullexception("searchwords");	}	string msdnurl = string.concat("http: browserpane browser = activehelp3browser();	if (browser != null) {	
 helpviewer displaysearchonmsdn calls 
+
+========================= sharpdevelop sample_1716 =========================
 
 public static void initializelocalestore(string productcode, string productversion, string locale, string brandingpackage) {	if (help3environment.islocalstoreinitialized) { return; }	if (string.isnullorempty(productcode)) { throw new argumentnullexception("productcode"); }	if (string.isnullorempty(productversion)) { throw new argumentnullexception("productversion"); }	if (string.isnullorempty(locale)) { throw new argumentnullexception("locale"); }	if (!regex.ismatch(productversion, @"^\d{3}$", regexoptions.cultureinvariant | regexoptions.ignorecase)) { throw new argumentoutofrangeexception("productversion"); }	if (!regex.ismatch(locale, @"^\w{2}-\w{2}", regexoptions.cultureinvariant | regexoptions.ignorecase)) { throw new argumentoutofrangeexception("locale"); }	string brandingswitch = (!string.isnullorempty(brandingpackage)) ? string.format("/brandingpackage \"{0}\"", brandingpackage):"";	string arguments = string.format("/product {0} /version {1} /locale {2} /content \"{3}\" {4}", productcode, productversion, locale, help3environment.buildlocalstorefolder, brandingswitch);	
 helpviewer initializing local store with 
@@ -181,11 +223,17 @@ helpviewer
 public static bool stop(bool waitforexit) {	try {	process[] managers = process.getprocessesbyname("helplibmanager");	foreach (process manager in managers) {	manager.kill();	if (waitforexit) manager.waitforexit();	}	loggingservice.debug(string.format("helpviewer: {0} helplibrarymanager {1} stopped", managers.length, (managers.length == 1)?"process":"processes"));	}	catch (exception ex) {	
 helpviewer 
 
+========================= sharpdevelop sample_1722 =========================
+
 public void navigate(uri url) {	try {	webbrowser.navigate(url);	} catch (exception ex) {	
 error navigating to 
 
+========================= sharpdevelop sample_5158 =========================
+
 for (int i = savedcasts.count - 1; i >= 0; --i) {	savedcastinfo savedcastinfo = savedcasts[i];	try {	type casttype = reflectionhelper.gettype(savedcastinfo.casttypename);	if (casttype == null) {	throw new exception ("cast type: " + savedcastinfo.casttypename + " not found");	}	castinfo ci = new castinfo(savedcastinfo.membersignature, savedcastinfo.typename, casttype, true);	_casts.add(ci.key, ci);	} catch (exception ex) {	
 warning invalid cast information in registry for deleting exception 
+
+========================= sharpdevelop sample_97 =========================
 
 public static void go(inavigationpoint target) {	if (target==null) {	return;	}	linkedlistnode<inavigationpoint> targetnode;	targetnode = history.find(target);	if (targetnode!=null) {	currentnode = targetnode;	} else {	
 logging additional point 
@@ -202,11 +250,17 @@ navigationservice resumelogging called without corresponding suspendlogging
 static void activeviewcontentchanged(object sender, eventargs e) {	iviewcontent vc = sd.workbench.activeviewcontent;	if (vc == null) return;	
 navigationservice activeviewcontent subview 
 
+========================= sharpdevelop sample_5400 =========================
+
 public override void visit(exporttext exportcolumn){	if (exportcolumn.text.equals("basetextitem2147483637")) {	
 stop 
 
+========================= sharpdevelop sample_1389 =========================
+
 public const int help_context = 0x0001;	[dllimport("user32.dll")]	public static extern int winhelp(intptr hwnd, string helpfile, int command, int data);	public static string getlasterrortext() {	stringbuilder sb = new stringbuilder(2000);	int error = getlasterror();	if (formatmessage(format_message_from_system, 0, error, 0, sb, sb.capacity, 0) != 0) {	return "error: " + error + " - " + sb.tostring();	}	else {	
 error getting message text 
+
+========================= sharpdevelop sample_86 =========================
 
 public void fixvbcasingandaddmethodcallparenthesis2() {	
 console writeline appdomain getcurrentthreadid console writeline appdomain getcurrentthreadid 
@@ -214,14 +268,20 @@ console writeline appdomain getcurrentthreadid console writeline appdomain getcu
 public void fixvbcasingandaddmethodcallparenthesis3() {	
 console writeline t console writeline t 
 
+========================= sharpdevelop sample_4749 =========================
+
 protected void makeaccessorclass(string key, type objtype, fieldinfo[] structfields) {	typebuilder tb;	_key = key;	_structfields = structfields;	int structfieldslast = structfields.length - 1;	fieldinfo memberfield = structfields[structfieldslast];	if (traceutil.if(this, tracelevel.info)) {	
 makeaccessor 
 
 protected static void setvalue(fieldinfo[] structfields, object obj, object value, int index) {	if (traceutil.if(typeof(structaccessor), tracelevel.verbose)) {	
 struct setting field 
 
+========================= sharpdevelop sample_75 =========================
+
 public assemblydefinition tryresolve(assemblynamereference reference) {	try {	return resolve(reference);	} catch (assemblyresolutionexception are) {	
 cqa skipping assembly reference exception 
+
+========================= sharpdevelop sample_1983 =========================
 
 }	} else {	methodgroupresolveresult methrr = resolveresult as methodgroupresolveresult;	if (methrr != null) {	if (chartyped == '(') {	member = methrr.getmethodifsingleoverload();	}	}	}	if (member is imethod && languageproperties.csharp.namecomparer.equals(member.fullyqualifiedname, "icsharpcode.core.resourceservice.getstring") ) {	
 resourcetoolkit icsharpcodecorenrefactoryresourceresolver resourceservice resource access detected 
@@ -232,11 +292,15 @@ resourcetoolkit icsharpcodecorenrefactoryresourceresolver trying to get key from
 #endif invocationexpression invocation = expr as invocationexpression;	if (invocation != null) {	memberreferenceexpression fre = invocation.targetobject as memberreferenceexpression;	if (fre != null) {	if (fre.membername == "getstring") {	if (invocation.arguments.count > 0) {	primitiveexpression p = invocation.arguments[0] as primitiveexpression;	if (p != null) {	string key = p.value as string;	if (key != null) {	
 resourcetoolkit icsharpcodecorenrefactoryresourceresolver found key 
 
+========================= sharpdevelop sample_1622 =========================
+
 protected override icollection getchildren() {	lock (_allclasses) {	if (_allclasses.count > 0) return _allclasses.values;	try {	intptr comobj;	int result = nogoop.win32.activex.cocreateinstance (ref nogoop.win32.activex.categoriesmgrclsid, (intptr)0, nogoop.win32.activex.clsctx_inproc_server, ref nogoop.win32.activex.iunknowniid, out comobj);	
 com create x 
 
 enumclsids.next(1, out clsid, out numret);	if (numret == 0) break;	basicinfo info = comclassinfo.getclassinfo(clsid);	if (info != null) _allclasses.add(info, info);	}	marshal.releasecomobject(enumclsids);	marshal.releasecomobject(catinfo);	}	}	catch (exception ex) {	
 categories failure to read 
+
+========================= sharpdevelop sample_156 =========================
 
 public static bool start() {	if (isrunning) return true;	if (!help3environment.islocalhelp) return false;	try {	process p = process.start(agent);	p.waitforinputidle();	
 helpviewer helplibraryagent started 
@@ -246,6 +310,8 @@ helpviewer
 
 public static bool stop(bool waitforexit) {	try {	process[] agents = process.getprocessesbyname("helplibagent");	foreach (process agent in agents) {	agent.kill();	if (waitforexit) agent.waitforexit();	}	loggingservice.debug(string.format("helpviewer: {0} helplibraryagent {1} stopped", agents.length, (agents.length == 1)?"process":"processes"));	}	catch (exception ex) {	
 helpviewer 
+
+========================= sharpdevelop sample_1717 =========================
 
 testresultwriter = new streamwriter ( namedpipe, encoding.utf8 );	((streamwriter)testresultwriter).autoflush = true;	}	testpackage package = maketestpackage(options);	processmodel processmodel = package.settings.contains("processmodel") ? (processmodel)package.settings["processmodel"]	: processmodel.default;	domainusage domainusage = package.settings.contains("domainusage") ? (domainusage)package.settings["domainusage"]	: domainusage.default;	runtimeframework framework = package.settings.contains("runtimeframework") ? (runtimeframework)package.settings["runtimeframework"]	: runtimeframework.currentframework;	
 processmodel domainusage 
@@ -274,11 +340,15 @@ errors and failures
 private void writenotrunreport(testresult result) {	reportindex = 0;	
 tests not run 
 
+========================= sharpdevelop sample_364 =========================
+
 public designergenerator() {	
 create designergenerator 
 
 public void attach(designerview viewcontent) {	if (viewcontent == null) throw new argumentnullexception("viewcontent");	
 designergenerator attach 
+
+========================= sharpdevelop sample_1550 =========================
 
 public static void main(string[] args) {	processstartinfo benchmarkstartinfo = new processstartinfo("benchmark.exe", "/automated");	benchmarkstartinfo.useshellexecute = false;	processstartinfo benchmark32startinfo = new processstartinfo("benchmark32.exe", "/automated");	benchmark32startinfo.useshellexecute = false;	list<testseries> testseries = new list<testseries>();	if (file.exists(benchmark32startinfo.filename)) {	testseries.add(new testseries("without profiler (32-bit)", () => withoutprofiler(benchmark32startinfo)));	testseries.add(new testseries("with profiler (32-bit)", () => withprofiler(benchmark32startinfo)));	} else {	
 bit tests not executed could not find exe 
@@ -291,6 +361,8 @@ testset run
 
 console.writeline();	console.writeline(resultsets[0].results[i].name);	var averagestrings = resultsets.select(s => s.results[i].average.tostring("f4")).toarray();	var sdstrings = resultsets.select(s => s.results[i].standarddeviation.tostring("f4")).toarray();	int maxaveragelength = averagestrings.max(s => s.length);	int maxsdlength = sdstrings.max(s => s.length);	var bestresult = resultsets.min(s => s.results[i].average);	var factorstrings = resultsets.select(s => (s.results[i].average / bestresult).tostring("f2")).toarray();	int maxfactorlength = factorstrings.max(s => s.length);	for (int j = 0; j < resultsets.length; j++) {	
 x 
+
+========================= sharpdevelop sample_1993 =========================
 
 ucomimoniker moniker = monikers[0];	object obj;	rot.getobject(moniker, out obj);	string monikername;	moniker.getdisplayname(bc, null, out monikername);	comobjectinfo comobjinfo;	object runobj = runninghash[obj];	if (runobj != null) {	comobjinfo = (comobjectinfo) objectinfo.getobjectinfo(obj);	if (monikername.equals(comobjinfo._monikername)) {	
 rot skipping duplicate 
@@ -361,17 +433,27 @@ comobjectinfo no class found using static
 else {	if (traceutil.if(this, tracelevel.info)) {	}	setstatictype();	return _objtypestatic;	}	string classname = chosenclass._container.name + "." + chosenclass.name;	if (chosenclass is comclassinfo) classname += "class";	type t = type.gettype(classname + "," + _typelib.name, true, true);	if (traceutil.if(this, tracelevel.info)) {	
 comobjectinfo found type 
 
+========================= sharpdevelop sample_65 =========================
+
 return sd.projectservice.loadproject(projectinfo);	} catch (filenotfoundexception) {	return new missingproject(projectinfo);	} catch (projectloadexception ex) {	exception = ex;	} catch (ioexception ex) {	exception = ex;	} catch (unauthorizedaccessexception ex) {	exception = ex;	}	
 project load error 
+
+========================= sharpdevelop sample_4588 =========================
 
 protected override object createtext() {	var location = anchor.location;	
 creating text for search result 
 
+========================= sharpdevelop sample_608 =========================
+
 public static object ensuretype(object value,type targettype,object nullvalue) {	if (value == null) return nullvalue;	if (targettype == typeof(object)) return value;	if (value.gettype() == targettype) return value;	try {	return convert.changetype(value, targettype,cultureinfo.currentculture);	} catch (exception e) {	
 typenormalizer 
 
+========================= sharpdevelop sample_1399 =========================
+
 public override void dispose() {	
 xmltreeview dispose 
+
+========================= sharpdevelop sample_2659 =========================
 
 protected override void initialize() {	if (removeme != null) {	nodes.remove(removeme);	removeme = null;	}	
 initialize directorynode 
@@ -385,6 +467,8 @@ not in same directory performing
 public override void dodragdrop(idataobject dataobject, dragdropeffects effect) {	performinitialization();	expand();	try {	if (dataobject.getdatapresent(typeof(filenode))) {	filenode filenode = (filenode)dataobject.getdata(typeof(filenode));	if (!fileutility.isequalfilename(directory, filenode.filename) && !fileutility.isequalfilename(directory, path.getdirectoryname(filenode.filename)) && !(filenode.projectitem is fileprojectitem && fileutility.isequalfilename(directory, path.getdirectoryname(getfullvirtualname((fileprojectitem)filenode.projectitem))))) {	copyfilehere(filenode, effect == dragdropeffects.move);	} else {	
 in same directory removing dependency 
 
+========================= sharpdevelop sample_5179 =========================
+
 public wpfpreview(reportdesignerloader loader,iviewcontent content):base(content) {	
 create wpfpreview 
 
@@ -393,6 +477,8 @@ loadfrompromary
 
 protected override void savetoprimary() {	
 wpfpreview savetoprimary is not implemented 
+
+========================= sharpdevelop sample_1544 =========================
 
 basepath.append(uri.segments[uri.segments.length - 1]);	basepath.replace("%20", " ");	basepath.replace("%00", "");	uri seconduri = new uri(basepath.tostring());	if (!file.exists(seconduri.localpath)) {	errordialog.show("unable to open help file " + uri.localpath + " (also tried " + seconduri.localpath + ")", "unable to open help file", messageboxicon.error);	return;	}	uri = seconduri;	}	
 help 
@@ -403,8 +489,12 @@ help window
 protected void checkposition(int helpwindow) {	
 setting position 
 
+========================= sharpdevelop sample_195 =========================
+
 static void createsnippetfile() {	string filename = snippetfilename;	if (!file.exists(filename)) {	
 creating snippet cs file 
+
+========================= sharpdevelop sample_315 =========================
 
 public void showpad(paddescriptor content) {	
 workbenchlayout showpad not implemented 
@@ -415,17 +505,23 @@ workbenchlayout loadconfiguration not implemented
 public void storeconfiguration() {	
 workbenchlayout storeconfiguration not implemented 
 
+========================= sharpdevelop sample_305 =========================
+
 public override void showcontextmenu(commandid menuid, int x, int y) {	string contextmenupath = "/sharpdevelop/reportdesigner/contextmenus/";	var selectionservice = (iselectionservice)base.getservice(typeof(iselectionservice));	if (selectionservice != null) {	if (menuid == menucommands.trayselectionmenu) {	contextmenupath += "trayselectionmenu";	}	else if (selectionservice.primaryselection is rootreportmodel) {	
 found root 
 
 string contextmenupath = "/sharpdevelop/reportdesigner/contextmenus/";	var selectionservice = (iselectionservice)base.getservice(typeof(iselectionservice));	if (selectionservice != null) {	if (menuid == menucommands.trayselectionmenu) {	contextmenupath += "trayselectionmenu";	}	else if (selectionservice.primaryselection is rootreportmodel) {	contextmenupath += "containermenu";	}	else if (selectionservice.primaryselection is basesection) {	
 found basesection 
 
+========================= sharpdevelop sample_1554 =========================
+
 public override void run() {	var view = (system.windows.controls.listview)owner;	foreach (var t in view.selecteditems.oftype<sdtask>().toarray()) {	if (t.builderror == null) continue;	string code = t.builderror.errorcode;	if (string.isnullorempty(code)) return;	if (help3environment.ishelp3protocolregistered) {	
 helpviewer getting description of 
 
 public override void run() {	var view = (system.windows.controls.listview)owner;	foreach (var t in view.selecteditems.oftype<sdtask>().toarray()) {	if (t.builderror == null) continue;	string code = t.builderror.errorcode;	if (string.isnullorempty(code)) return;	if (help3environment.ishelp3protocolregistered) {	if (help3environment.islocalhelp) displayhelp.keywords(code);	else displayhelp.contextualhelp(code);	} else {	
 helpviewer help system ist not initialized 
+
+========================= sharpdevelop sample_1713 =========================
 
 public idictionary<string, iresourcefilecontent> getlocalizedcontents(string filename) {	
 resourcetoolkit defaultfilelocalizedresourcesfinder getlocalizedcontents called filename 
@@ -448,14 +544,20 @@ possible file
 public static idictionary<string, iresourcefilecontent> findlocalizedresourcefiles(string filenamewithoutextension, string extension) {	dictionary<string, iresourcefilecontent> list = new dictionary<string, iresourcefilecontent>();	#endif foreach (string filename in directory.getfiles(path.getdirectoryname(filenamewithoutextension), path.getfilename(filenamewithoutextension)+".*"+extension)) {	#endif string culture = path.getextension(path.getfilenamewithoutextension(filename));	#if debug loggingservice.debug("    -> culture = '"+(culture ?? "<null>")+"'");	#endif if (!string.isnullorempty(culture)) {	try {	cultureinfo ci = cultureinfo.getcultureinfo(culture.substring(1));	iresourcefilecontent content = resourcefilecontentregistry.getresourcefilecontent(filename);	if (content != null) {	
 culture name 
 
+========================= sharpdevelop sample_1593 =========================
+
 public codecompletionkeypressresult handlekeypress(itexteditor editor, char ch) {	if (ch == ':') {	if (editor.caret.offset >= 5 && editor.document.gettext(editor.caret.offset-5, 5) == "${res") {	iresourcefilecontent content = icsharpcodecoreresourceresolver.geticsharpcodecorelocalresourceset(editor.filename).resourcefilecontent;	#if debug if (content != null) {	
 resourcetoolkit found local icsharpcode core resource file 
 
 public codecompletionkeypressresult handlekeypress(itexteditor editor, char ch) {	if (ch == ':') {	if (editor.caret.offset >= 5 && editor.document.gettext(editor.caret.offset-5, 5) == "${res") {	iresourcefilecontent content = icsharpcodecoreresourceresolver.geticsharpcodecorelocalresourceset(editor.filename).resourcefilecontent;	#if debug if (content != null) {	}	#endif iresourcefilecontent hostcontent = icsharpcodecoreresourceresolver.geticsharpcodecorehostresourceset(editor.filename).resourcefilecontent;	if (hostcontent != null) {	
 resourcetoolkit found host icsharpcode core resource file 
 
+========================= sharpdevelop sample_1602 =========================
+
 public override bool execute() {	if (monotoollocationhelper.ismonoinstalled) {	path = monotoollocationhelper.getpathtomonosdk();	log.logmessage(messageimportance.low, "monosdk: " + path);	return true;	}	
 mono is not installed 
+
+========================= sharpdevelop sample_271 =========================
 
 if (e.item is idragdropitem) {	idragdropitem node = (idragdropitem)e.item;	node.selectthisitem();	if (node.isdragsource) {	designerhost.host.addingcontrols = true;	((control)_control).dodragdrop(node, dragdropeffects.copy);	designerhost.host.addingcontrols = false;	}	}	} catch (exception ex) {	
 itemdragevent exception 
@@ -469,8 +571,12 @@ exception in event handler
 if (node != null) {	cursor save = cursor.current;	cursor.current = cursors.waitcursor;	node.dodrop(targetnode);	cursor.current = save;	} else {	idroptarget con = findancestordropcontrol(e);	if (con != null) con.dragdropevent(sender, e);	}	} catch (exception ex) {	
 exception in event handler 
 
+========================= sharpdevelop sample_113 =========================
+
 var types = new list<type>();	if (basetype == null) {	basetype = typeof(object);	}	loggingservice.debug("typediscoveryservice.gettypes for " + basetype.fullname + "excludeglobaltypes=" + excludeglobaltypes.tostring());	foreach (assembly asm in typeresolutionservice.designerassemblies.toarray()) {	if (excludeglobaltypes) {	}	addderivedtypes(basetype, asm, types);	}	
 typediscoveryservice returns types 
+
+========================= sharpdevelop sample_1560 =========================
 
 protected override object getservice(type servicetype) {	object service = base.getservice(servicetype);	if (service == null && serviceprovider != null) {	service = serviceprovider.getservice(servicetype);	}	#if idecontainer_log_service_requests if (service == null) {	
 idecontainer request missing service 
@@ -478,20 +584,28 @@ idecontainer request missing service
 protected override object getservice(type servicetype) {	object service = base.getservice(servicetype);	if (service == null && serviceprovider != null) {	service = serviceprovider.getservice(servicetype);	}	#if idecontainer_log_service_requests if (service == null) {	} else {	
 idecontainer get service is 
 
+========================= sharpdevelop sample_5169 =========================
+
 if (automated) {	automationoutput = new streamwriter("benchmark.out");	}	stopwatch w = new stopwatch();	w.start();	test(swapandvirtualcalls);	test(badrecursion);	test(quicksort);	test(floatcalculation);	w.stop();	
 total tests time 
 
 if (automated) {	automationoutput = new streamwriter("benchmark.out");	}	stopwatch w = new stopwatch();	w.start();	test(swapandvirtualcalls);	test(badrecursion);	test(quicksort);	test(floatcalculation);	w.stop();	
 total time 
 
+========================= sharpdevelop sample_2047 =========================
+
 public static bool openfilesinpreviousinstance(string[] filelist) {	
 trying to pass arguments to previous instance 
+
+========================= sharpdevelop sample_4629 =========================
 
 string docname;	string docstring;	int helpcontext;	string helpfile;	utypeinfo.getdocumentation(-1, out docname, out docstring, out helpcontext, out helpfile);	if (docname.equals("guid")) docname = "system.guid";	if (!comtype) return typelib.resolvetypedef(docname, comtype);	return docname;	}	else {	
 user x unknown 
 
 if (!comtype) return typelib.resolvetypedef(docname, comtype);	return docname;	}	else {	return "(userdef unknown)";	}	}	return gettypestr(typedesc.vt, comtype);	}	catch (exception ex) {	
 activex type conversion error 
+
+========================= sharpdevelop sample_61 =========================
 
 continue;	}	break;	}	if (!fileutility.isequalfilename(this.filename, this.membertofind.declaringtype.compilationunit.filename)) {	throw new invalidoperationexception("the propertyfieldassociationvisitor does currently not support the case that the field is declared in a different file than the property.");	}	memberresolveresult mrr = this.resolve(expr) as memberresolveresult;	if (mrr != null && mrr.resolvedmember is ifield) {	propertydeclaration pd;	
 resourcetoolkit propertyfieldassociationvisitor inside propertygetregion resolved field 
@@ -517,11 +631,15 @@ resourcetoolkit propertyfieldassociationvisitor inside propertysetregion resolve
 memberresolveresult mrr = this.resolve(assignmentexpression.left) as memberresolveresult;	if (mrr != null && mrr.resolvedmember is ifield && !((ifield)mrr.resolvedmember).islocalvariable) {	propertydeclaration pd;	#endif if (data as bool? ?? false) {	#endif this.associatedmember = mrr.resolvedmember;	} else if ((pd = (data as propertydeclaration)) != null) {	if (this.membertofind.compareto(mrr.resolvedmember) == 0) {	memberresolveresult prr = nrefactoryastcacheservice.resolvelowlevel(this.filename, this.filecontent, pd.startlocation.y, pd.startlocation.x+1, null, pd.name, expressioncontext.default) as memberresolveresult;	if (prr != null) {	#endif if (prr.resolvedmember is iproperty) {	
 resourcetoolkit propertyfieldassociationvisitor inside propertysetregion property seems to reference field 
 
+========================= sharpdevelop sample_1619 =========================
+
 } else {	references.add(new reference(filename, keypos, keystring.length, keystring, rrr));	}	} else {	references.add(new reference(filename, pos, 0, null, rrr));	}	}	}	}	}	
 resourcetoolkit findreferences finished in s 
 
 referencedprefixes[filename].add(rprr.prefix);	}	}	} else {	if (monitor != null) monitor.showingdialog = true;	messageservice.showwarning("found a resource reference that could not be resolved."+environment.newline+(reference.filename ?? "<null>")+":"+reference.offset+environment.newline+"expression: "+(reference.expression ?? "<null>"));	if (monitor != null) monitor.showingdialog = false;	}	}	foreach (string filename in referencedkeys.keys) {	
 resourcetoolkit findunusedkeys referenced resource file 
+
+========================= sharpdevelop sample_1588 =========================
 
 public virtual void notifycomponentrenamed(object component, string newname, string oldname) {	reparse();	
 renaming form to 
@@ -547,8 +665,12 @@ abstractdesignergenerator reparse could not find initializecomponents in designe
 return false;	}	}	return true;	}	}	viewcontent.mergeformchanges();	completeclass = reparse();	file = currentclasspart.parsedfile.filename;	int line = geteventhandlerinsertionline(currentclasspart);	
 inserting new event handler at line 
 
+========================= sharpdevelop sample_2900 =========================
+
 _progress.updateprogress(1);	registrykey key = _basekey.opensubkey(str);	object info = processchild(key, str);	if (info != null) {	_allchildren.add(getsortkey(info), info);	} else {	_progress.updateprogress(1);	}	} catch (exception ex) {	_progress.updateprogress(1);	
 failure to read 
+
+========================= sharpdevelop sample_159 =========================
 
 public void dragenterevent(object sender, drageventargs e) {	try	{	if (candrop(e))	{	e.effect = dragdropeffects.copy;	}	} catch (exception ex){	
 exception in event handler 
@@ -559,23 +681,31 @@ exception in event handler
 return true;	} catch (exception ex) {	savedexception = ex;	}	try {	comsupport.openfile(filename);	return true;	} catch (exception ex) {	if (savedexception == null) savedexception = ex;	}	
 error opening file 
 
+========================= sharpdevelop sample_108 =========================
+
 static memberreference findmember(moduledefinition module, string key, func<typedefinition, ienumerable<memberreference>> memberselector) {	
 looking for member 
 
 }	if (dotpos < 0) return null;	typedefinition type = findtype(module, key.substring(2, dotpos - 2));	if (type == null) return null;	string shortname;	if (parenpos > 0) {	shortname = key.substring(dotpos + 1, parenpos - (dotpos + 1));	} else {	shortname = key.substring(dotpos + 1);	}	
 searching in type for 
 
-public static void main() {	system.diagnostics.debugger.break();	
-main 
+========================= sharpdevelop sample_401 =========================
 
 public static void main() {	system.diagnostics.debugger.break();	
 main 
 
 public static void main() {	system.diagnostics.debugger.break();	
 main 
+
+public static void main() {	system.diagnostics.debugger.break();	
+main 
+
+========================= sharpdevelop sample_3270 =========================
 
 public static void userefboolincondition(ref bool x) {	if (x) {	
 true 
+
+========================= sharpdevelop sample_435 =========================
 
 object processnode(xmlnode node, object parent) {	object ret=null;	if (node is xmlelement) {	string ns=node.prefix;	string cname=node.localname;	type t=gettypebyname(ns, cname);	try {	ret=activator.createinstance(t);	}	catch(exception) {	
 mycroparser 
@@ -589,14 +719,22 @@ unsupported property
 try {	if (tc.canconvertfrom(typeof(string))) {	object val=tc.convertfrominvariantstring(value);	pi.setvalue(obj, val, null);	} else if (pi.propertytype == typeof(type)) {	pi.setvalue(obj, type.gettype(value), null);	}	}	catch(exception e) {	var s = string.format(cultureinfo.currentculture,"property setter for {0} failed {1}\r\n",pi.name, e.message);	
 mycroparser 
 
+========================= sharpdevelop sample_1386 =========================
+
 foreach (runtime runtime in runtimes) {	if (!runtime.ishostapplicationassembly) {	loaddependencies();	}	type t = runtime.findtype(classname);	if (t != null) {	return t;	}	}	if (hasshownerrormessage) {	
 cannot find class 
+
+========================= sharpdevelop sample_4511 =========================
 
 if (offset.x >= _wnd.width) offset.x = _wnd.width / 2;	_wnd.left = point.x - offset.x;	_wnd.top = point.y - offset.y;	_wnd.show();	int surfacecount = 0;	restart: surfacecount = surfaces.count;	foreach (idropsurface surface in surfaces) {	if (surface.surfacerectangle.contains(point)) {	surfaceswithdragover.add(surface);	surface.ondragenter(point);	
 enter 
 
+========================= sharpdevelop sample_551 =========================
+
 static eventwaithandle createnew(ref int eventname, bool initialvalue) {	if (rnd == null) rnd = new random();	eventwaithandle ev = null;	while (ev == null) {	eventname = rnd.next();	bool creatednew;	ev = new eventwaithandle(initialvalue, eventresetmode.autoreset, geteventname(eventname), out creatednew);	if (!creatednew) {	
 collision on name creation 
+
+========================= sharpdevelop sample_2078 =========================
 
 public void validatexml() {	taskservice.clearexceptcommenttasks();	category.cleartext();	showoutputwindow();	
 res mainwindow xmlvalidationmessages validationstarted 
@@ -607,11 +745,15 @@ res mainwindow xmlvalidationmessages validationsuccess
 static void showvalidationfailedmessage() {	outputwindowwriteline(string.empty);	
 res mainwindow xmlvalidationmessages validationfailed 
 
+========================= sharpdevelop sample_2627 =========================
+
 public projectresourceinfo getprojectresource(codepropertyreferenceexpression propref) {	codetypereferenceexpression typeref = propref.targetobject as codetypereferenceexpression;	if (typeref == null) {	
 target of possible project resources property reference is not a type reference but 
 
 index = code.indexof(this.stringliteraldelimiter, index + 1, stringcomparison.ordinal);	if (index == -1) {	throw new invalidoperationexception("no string delimiter ('" + this.stringliteraldelimiter + "') found in property getter of '" + prop.fullname + "'. code: '" + code + "'");	}	index += this.stringliteraldelimiter.length;	int endindex = code.lastindexof(this.stringliteraldelimiter, stringcomparison.ordinal);	if (endindex == -1) {	throw new invalidoperationexception("no string terminator ('" + this.stringliteraldelimiter + "') found in property getter of '" + prop.fullname + "'. code: '" + code + "'");	}	string resourcekey = code.substring(index, endindex - index);	
 decoded resource in key 
+
+========================= sharpdevelop sample_2924 =========================
 
 public virtual void select() {	browsertree tree = (browsertree)treeview;	try {	tree.treemenuhelper.setupactionmenu(this, tree);	} catch (exception ex) {	
 exception in menu processing 
@@ -622,11 +764,17 @@ exception in setupparampanel
 public virtual void invalidatenode() {	
 invalidating 
 
+========================= sharpdevelop sample_149 =========================
+
 public object visit(abstractprojectbrowsertreenode abstractprojectbrowsertreenode, object data) {	
 warning visited default visit for 
 
+========================= sharpdevelop sample_5191 =========================
+
 protected override void loadinternal(openedfile file, stream stream) {	
 loadinternal 
+
+========================= sharpdevelop sample_2691 =========================
 
 static bool projectcontainsreference(iproject project, assemblyname referencename) {	
 checking project has reference 
@@ -655,14 +803,20 @@ added assembly reference to project
 static void addprojectreferencetoproject(iproject project, iproject referenceto) {	
 adding project reference to project 
 
+========================= sharpdevelop sample_2883 =========================
+
 l = new label();	l.dock = dockstyle.top;	l.text = name;	l.autosize = true;	l.font = new font(l.font, fontstyle.bold);	h += l.height;	panel.controls.add(l);	panel.height = h;	pi._controlpanel = panel;	_paraminfos.add(pi);	
 param control 
+
+========================= sharpdevelop sample_169 =========================
 
 static ienumerable<itreenode<iclass>> findderivedclassestree(iclass baseclass, ienumerable<iprojectcontent> projectcontents, hashset<iclass> seenclasses) {	baseclass = baseclass.getcompoundclass();	
 findderivedclasses tree for 
 
 static void findderivedclasses(hashset<iclass> resultlist, iclass baseclass, ienumerable<iprojectcontent> projectcontents, bool directderivationonly) {	baseclass = baseclass.getcompoundclass();	
 findderivedclasses for 
+
+========================= sharpdevelop sample_5393 =========================
 
 filenode filenode = node as filenode;	if (filenode != null) {	fileprojectitem fileitem = filenode.projectitem as fileprojectitem;	if (fileitem != null && string.equals(fileitem.dependentupon, path.getfilename(oldfilename), stringcomparison.ordinalignorecase)) {	fileitem.dependentupon = newname;	}	if (filenode.text.startswith(oldprefix)) {	filenode.afterlabeledit(newprefix + filenode.text.substring(oldprefix.length));	}	} else {	
 filenode afterlabeledit child is not a filenode 
@@ -682,11 +836,17 @@ created new dependency saving solution
 parentdirectory.copyfilehere(other, effect == dragdropeffects.move);	other = parentdirectory.allnodes.oftype<filenode>().singleordefault(n => fileutility.isequalfilename(path.getfilename(n.filename), otherfilename));	}	if (other != null) {	other.remove();	((fileprojectitem)other.projectitem).dependentupon = path.getfilename(this.filename);	other.filenodestatus = filenodestatus.behindfile;	other.insertsorted(this);	projectservice.savesolution();	} else {	
 could not find the copied or moved file node in the new parent directory 
 
+========================= sharpdevelop sample_5185 =========================
+
 public static mytypefinder create(openedfile file) {	mytypefinder f = new mytypefinder();	f.file = file;	f.importfrom(createwpftypefinder());	var compilation = sd.parserservice.getcompilationforfile(file.filename);	foreach (var referencedassembly in compilation.referencedassemblies) {	try {	var assembly = f.typeresolutionservice.loadassembly(referencedassembly);	if (assembly != null) f.registerassembly(assembly);	} catch (exception ex) {	
 error loading assembly 
 
+========================= sharpdevelop sample_2716 =========================
+
 static void opendialog(string filename, string dialogid) {	iviewcontent viewcontent = fileservice.openfile(filename);	wixdialogdesigner designer = wixdialogdesigner.getdesigner(viewcontent);	if (designer != null) {	designer.opendialog(dialogid);	} else {	
 could not open wix dialog designer for 
+
+========================= sharpdevelop sample_4414 =========================
 
 private static void accepttypedref(typedreference tr) {	
 value is 
@@ -694,29 +854,47 @@ value is
 private static void accepttypedref(typedreference tr) {	
 type is 
 
+========================= sharpdevelop sample_444 =========================
+
 public void formsreportcontains_4_sections() {	reportcreator.buildexportlist();	var x = reportcreator.pages[0].exporteditems;	var y = from s in x where s.gettype() == typeof(exportcontainer) select s;	assert.that(y.tolist().count,is.equalto(4));	
 pagelayoutfixture showdebug 
+
+========================= sharpdevelop sample_1355 =========================
 
 public void storeconfiguration() {	try {	layoutconfiguration current = layoutconfiguration.currentlayout;	if (current != null && !current.readonly) {	string configpath = layoutconfiguration.configlayoutpath;	directory.createdirectory(configpath);	string filename = path.combine(configpath, current.filename);	
 saving layout file 
 
+========================= sharpdevelop sample_4626 =========================
+
 public static void printnumberofunhandledopcodes() {	#if debug foreach (var pair in unhandledopcodes) {	
 addmethodbodybuilder unhandled opcode x 
+
+========================= sharpdevelop sample_483 =========================
 
 public value getvalue() {	if (cachedvalue == null || cachedvalueprocess.debuggeestate != cachedvaluedebuggeestate) {	stopwatch watch = new stopwatch();	watch.start();	cachedvalue = this.getvalue().getpermanentreference(windowsdebugger.evalthread);	cachedvalueprocess = cachedvalue.process;	cachedvaluedebuggeestate = cachedvalue.process.debuggeestate;	
 evaluated node in ms result cached 
 
+========================= sharpdevelop sample_3375 =========================
+
 public void createpad() {	if (sd.mainthread.invokerequired) {	throw new invalidoperationexception("this action could trigger pad creation and is only valid on the main thread!");	}	if (!padcontentcreated) {	padcontentcreated = true;	try {	if (addin != null) {	
 creating pad 
+
+========================= sharpdevelop sample_5077 =========================
 
 protected override memberrelationship getrelationship(memberrelationship source) {	loggingservice.debug("memberrelationshipservice: getrelationship called, source=" + tostring(source));	var mrs = base.getrelationship(source);	
 memberrelationshipservice returning 
 
+========================= sharpdevelop sample_2914 =========================
+
 public override void run() {	xmlview xmlview = xmlview.activexmlview;	if (xmlview != null) {	if (!string.isnullorempty(xmlview.file.filename)) {	xmlview assocfile = getassociatedxmlview(xmlview.file.filename);	if (assocfile != null) {	
 using associated xml file 
 
+========================= sharpdevelop sample_2617 =========================
+
 public override object editvalue(itypedescriptorcontext context, iserviceprovider provider, object value) {	if (context == null || context.propertydescriptor == null || context.instance == null || provider == null) {	return value;	}	icomponent component = context.instance as icomponent;	if (component == null || component.site == null) {	
 editing of image properties on objects not implementing icomponent and components without site is not supported by the imageresourceeditor 
+
+========================= sharpdevelop sample_2920 =========================
 
 config = configurationmanager.openmappedexeconfiguration(fm, configurationuserlevel.none);	}	if (config != null) {	appsettingssection section = (appsettingssection)config.getsection("appsettings");	string tmp = section.settings["helpmode"].value;	return (string.isnullorempty(tmp)) ? "offline":tmp;	}	}	}	catch (exception ex) {	
 helpviewer 
@@ -727,8 +905,12 @@ helpviewer trying to set help mode to
 config = configurationmanager.openmappedexeconfiguration(fm, configurationuserlevel.none);	}	if (config != null) {	appsettingssection section = (appsettingssection)config.getsection("appsettings");	section.settings["helpmode"].value = helpmode;	config.save();	}	}	}	catch (exception ex) {	
 helpviewer 
 
+========================= sharpdevelop sample_1728 =========================
+
 xmldocument doc = new xmldocument();	doc.load(path.combine(propertyservice.configdirectory, "sidebarconfig.xml"));	if (doc.documentelement.getattribute("version") != "1.0") {	generatestandardsidebar();	} else {	loadsidebarconfig(doc.documentelement["sidebar"]);	}	} catch (filenotfoundexception) {	generatestandardsidebar();	} catch (exception ex) {	
 error loading sidebarconfig xml 
+
+========================= sharpdevelop sample_5221 =========================
 
 static void loadcache() {	dict = new dictionary<string, usagestruct>();	sd.projectservice.solutionclosed += delegate { savecache(); };	string cachefilename = codecompletiondatausagecache.cachefilename;	if (string.isnullorempty(cachefilename) || !file.exists(cachefilename)) return;	using (filestream fs = new filestream(cachefilename, filemode.open, fileaccess.read)) {	using (binaryreader reader = new binaryreader(fs)) {	if (reader.readint64() != magic) {	
 codecompletiondatausagecache wrong file magic 
@@ -748,20 +930,32 @@ error saving cc cache
 public static void resetcache() {	dict = new dictionary<string, usagestruct>();	try {	if (file.exists(cachefilename)) {	file.delete(cachefilename);	}	} catch (exception ex) {	
 codecompletiondatausagecache resetcache 
 
+========================= sharpdevelop sample_5066 =========================
+
 public void runinitialization() {	addintree.load(addinfiles, disabledaddins);	var container = (iservicecontainer)servicesingleton.serviceprovider.getservice(typeof(iservicecontainer));	if (container != null) addintree.builditems<object>("/sharpdevelop/services", container, false);	
 running autostart commands 
+
+========================= sharpdevelop sample_4504 =========================
 
 public static void main() {	
 hello world 
 
+========================= sharpdevelop sample_3275 =========================
+
 static isettings loadsettings () {	try {	return settings.loaddefaultsettings(null, null, null);	} catch (exception ex) {	
 unable to load nuget config 
+
+========================= sharpdevelop sample_940 =========================
 
 public override void writecomment(commenttype commenttype, string content) {	switch (commenttype) {	
 output writeline content 
 
+========================= sharpdevelop sample_482 =========================
+
 }	toolloader.tool = newlist;	toolloader.savetools();	return true;	}	externaltool selectedtool;	public externaltool selectedtool {	get { return selectedtool; }	set {	selectedtool = value;	
 selected 
+
+========================= sharpdevelop sample_5254 =========================
 
 protected static void addrunningobjs() {	
 addrunningobjs 
@@ -784,11 +978,15 @@ activex restore end
 progressdialog.updateprogresstext(typelib.filename);	guid guid = new guid(typelib.guid);	typelibrary.restoretypelib(typelib.filename, guid, typelib.version);	progressdialog.updateprogress(1);	} catch (exception ex) {	_typelibs.remove(typelib);	progressdialog.updateprogress(1);	}	}	} catch (exception ex) {	
 unexpected exception restoring assemblies 
 
+========================= sharpdevelop sample_129 =========================
+
 public resolveresult resolve(expression expression, expressioncontext context) {	if (!this.positionavailable) {	
 resourcetoolkit positiontrackingastvisitor resolve failed due to position information being unavailable expression 
 
 public resolveresult resolve(expression expression, expressioncontext context) {	if (!this.positionavailable) {	return null;	}	
 resourcetoolkit positiontrackingastvisitor using this parent node for resolve 
+
+========================= sharpdevelop sample_1618 =========================
 
 public void invoke(bool setmember, bool autoinvoke, bool ignoreexception) {	
 invoke obj 
@@ -804,6 +1002,8 @@ add autoinvoke exception
 
 public override void doselectinvoke() {	try {	if (isautoinvoked(!constants.ignore_exception)) invoke(false, true, !constants.ignore_exception);	} catch (exception ex) {	
 select autoinvoke exception 
+
+========================= sharpdevelop sample_158 =========================
 
 protected override void loadinternal(openedfile file, system.io.stream stream) {	loggingservice.debug("forms designer: load " + file.filename + "; inmasterloadoperation=" + this.inmasterloadoperation);	if (this.typeresolutionservice != null) this.typeresolutionservice.clearcaches();	if (inmasterloadoperation) {	if (this.sourcecodestorage.containsfile(file)) {	
 forms designer loading in source code storage 
@@ -834,6 +1034,8 @@ merging form changes
 
 public virtual void mergeformchanges() {	sd.analyticsmonitor.trackfeature(typeof(formsdesignerviewcontent), "save");	if (this.hasloaderror || this.designsurface == null) {	return;	} else if (this.designercodefile == null) {	throw new invalidoperationexception("cannot merge form changes without a designer code file.");	}	bool isdirty = this.designercodefile.isdirty;	designsurface.flush();	this.resourcestore.commitallresourcechanges();	
 finished merging form changes 
+
+========================= sharpdevelop sample_2886 =========================
 
 public static bool isdotnetexecutable(string exename) {	try {	using (filestream f = new filestream(exename, filemode.open, fileaccess.read)) {	binaryreader r = new binaryreader(f);	f.position = 0x3c;	int peheaderstart = r.readint32();	f.position = peheaderstart;	if (r.readint32() != 0x00004550) {	
 net detection failed invalid pe signature 
@@ -886,6 +1088,8 @@ bit detection failed
 } else {	return true;	}	}	}	return false;	}	} catch (ioexception ex) {	return false;	} catch (argumentexception ex) {	
 bit detection failed 
 
+========================= sharpdevelop sample_2069 =========================
+
 static void dispatcher_unhandledexception(object sender, system.windows.threading.dispatcherunhandledexceptioneventargs e) {	
 unhandled wpf exception 
 
@@ -906,6 +1110,8 @@ error showing exceptionbox
 
 static void starturl(string url) {	try {	process.start(url);	} catch (exception e) {	
 cannot start 
+
+========================= sharpdevelop sample_4672 =========================
 
 public async void simplevoidmethod() {	
 before 
@@ -955,8 +1161,12 @@ a
 public async task awaitwithstack2(task<int> task) {	if (await this.simplebooltaskmethod()) {	}	else {	int num = 1;	
 a 
 
+========================= sharpdevelop sample_424 =========================
+
 static void startcommandline(string cmd, string workingdir) {	
 externalprocessdisplaybinding 
+
+========================= sharpdevelop sample_4945 =========================
 
 public static ienumerable<int> yieldreturnwithtryfinally() {	yield return 0;	try {	yield return 1;	} finally {	
 finally 
@@ -1006,11 +1216,15 @@ end of method
 public static ienumerable<string> yieldreturnwithtwononnestedfinallyblocks(ienumerable<string> input) {	foreach (string line in input) {	try {	yield return line;	} finally {	
 processed 
 
+========================= sharpdevelop sample_441 =========================
+
 public override object getservice(type servicetype) {	object service = base.getservice(servicetype);	if (service == null) {	
 request missing service from assembly is not available 
 
 public override object getservice(type servicetype) {	object service = base.getservice(servicetype);	if (service == null) {	} else {	
 get service from assembly 
+
+========================= sharpdevelop sample_2925 =========================
 
 xmldocument xml = new xmldocument();	xml.load(file.fullname);	xmlnodelist n = xml.selectnodes("/querymanifest[@version=\"1.0\"]/catalogs/catalog");	foreach (xmlnode node in n) {	catalogs.add( new help3catalog(node.attributes["productid"].innertext, node.attributes["productversion"].innertext, node.attributes["productlocale"].innertext, node.attributes["productdisplayname"].innertext, node.selectsinglenode("catalogpath").innertext, node.selectsinglenode("contentpath").innertext, node.selectsinglenode("brandingpackagefilename").innertext) );	}	}	loggingservice.debug(string.format("helpviewer: {0} {1} loaded", catalogs.count, (catalogs.count == 1)?"catalog":"catalogs"));	}	catch (exception ex) {	
 helpviewer 
@@ -1036,8 +1250,12 @@ helpviewer oncatalogchanged event raised
 static void onconfigurationupdated(eventargs e) {	
 helpviewer onconfigurationupdated event raised 
 
+========================= sharpdevelop sample_1719 =========================
+
 public bool canattachto(iviewcontent content) {	itexteditorprovider p = content as itexteditorprovider;	if (p != null) {	try {	using (xmltextreader r = new xmltextreader(p.texteditor.document.createreader())) {	r.xmlresolver = null;	while (r.read() && r.nodetype != xmlnodetype.element);	return r.namespaceuri == "http: }	} catch (xmlexception e) {	
 workflowdisplaybinding got exception 
+
+========================= sharpdevelop sample_2932 =========================
 
 protected override void generateiterationstatement(codeiterationstatement e) {	
 codeiterationstatement 
@@ -1120,6 +1338,8 @@ codeattributedeclarationcollection
 protected override void generateprimitiveexpression(codeprimitiveexpression e) {	if (e.value == null) {	
 codeprimitiveexpression null 
 
+========================= sharpdevelop sample_2906 =========================
+
 public void writewarningline_showwarningmessage_messagewrittentoconsole() {	createhostuserinterface();	hostui.writewarningline("test");	
 test 
 
@@ -1132,14 +1352,22 @@ test
 public void writedebugline_showmessage_messagewrittentoconsole() {	createhostuserinterface();	hostui.writedebugline("test");	
 test 
 
+========================= sharpdevelop sample_700 =========================
+
 static bool isgeneratedresourceclass(itypedefinition type) {	var generatedcodeattributetype = type.compilation.findtype(typeof(system.codedom.compiler.generatedcodeattribute));	if (generatedcodeattributetype.kind == typekind.unknown) {	
 could not find the class for system codedom compiler generatedcodeattribute 
+
+========================= sharpdevelop sample_3203 =========================
 
 public virtual void showexception(exception ex, string message) {	loggingservice.error(message, ex);	
 stack trace of last exception log 
 
+========================= sharpdevelop sample_4701 =========================
+
 static traceutil() {	try {	textwritertracelistener mywriter = new textwritertracelistener(system.console.out);	trace.listeners.add(mywriter);	} catch (exception ex) {	
 traceutil exception 
+
+========================= sharpdevelop sample_58 =========================
 
 string compare = string.empty;	int i = 0;	foreach (var element in collectionsource.sortedlist) {	collectionsource.fill(ric,element);	assert.that(((basedataitem)ric[0]).dbvalue,is.greaterthanorequalto(compare));	compare = ((basedataitem)ric[0]).dbvalue;	i++;	}	do {	collectionsource.fill(ric);	
 first last 
@@ -1150,20 +1378,30 @@ key
 collectionsource.bind();	int i = 0;	foreach (var element in collectionsource.groupedlist) {	foreach (var l in element) {	collectionsource.fill(dataitemscollection,l);	i++;	}	}	do {	collectionsource.fill(dataitemscollection);	
 first last group randomint 
 
+========================= sharpdevelop sample_1332 =========================
+
 public void instance_exceptionthrownbyscriptsfactory_errormessageloggedtoconsole() {	createrunner();	solutionhaspackageinitializationscripts();	fakeconsolehost.isrunning = true;	fakescriptsfactory.exceptiontothrow = new exception("error");	opensolution();	
 error 
+
+========================= sharpdevelop sample_710 =========================
 
 protected override void onselectionchanged(system.windows.controls.selectionchangedeventargs e) {	base.onselectionchanged(e);	if (editinglayout) return;	
 chooselayoutcommand run 
 
+========================= sharpdevelop sample_4624 =========================
+
 protected void findclick(object sender, eventargs e) {	setbuttons(true);	_cancelled = false;	searchinvalidate(null);	
 looking for 
+
+========================= sharpdevelop sample_188 =========================
 
 string name = node.attributes["name"].innertext;	category newcategory = new category(name);	foreach (xmlnode componentnode in node.childnodes) {	toolcomponent newtoolcomponent = new toolcomponent(componentnode.attributes["class"].innertext, (componentassembly)assemblies[int32.parse(componentnode.attributes["assembly"].innertext)], isenabled(componentnode.attributes["enabled"]));	newcategory.toolcomponents.add(newtoolcomponent);	}	categories.add(newcategory);	}	}	} catch (exception e) {	
 componentlibraryloader loadtoolcomponentlibrary 
 
 }	}	if (b == null) {	try {	stream imagestream = asm.getmanifestresourcestream(component.fullname + ".bmp");	if (imagestream != null) {	b = new bitmap(image.fromstream(imagestream));	b.maketransparent(color.fuchsia);	}	} catch (exception e) {	
 componentlibraryloader geticon 
+
+========================= sharpdevelop sample_2891 =========================
 
 public toolboxservice() {	
 create tolboxservice 
@@ -1192,8 +1430,12 @@ removetoolboxitem
 public object serializetoolboxitem(toolboxitem toolboxitem) {	
 nnnn 
 
+========================= sharpdevelop sample_1559 =========================
+
 public static void setfocustorememberedchild(uielement element) {	iinputelement focusedchild = getfocusedchild(element);	
 restoring focus for to 
+
+========================= sharpdevelop sample_5150 =========================
 
 public unusedresourcekeysviewcontent(icollection<resourceitem> unusedkeys) {	
 resourcetoolkit creating new unusedresourcekeysviewcontent 
@@ -1207,8 +1449,12 @@ resourcetoolkit looking in localized resource file
 } else {	messageservice.showwarning("resouretoolkit: could not get resourcefilecontent for '"+filename+"' key +'"+key+"'.");	}	} catch (exception ex) {	messageservice.showwarningformatted("${res:hornung.resourcetoolkit.errorprocessingresourcefile}" + environment.newline + ex.message, filename);	return;	}	foreach (keyvaluepair<string, iresourcefilecontent> entry in resourcefilecontentregistry.getlocalizedcontents(filename)) {	try {	if (entry.value.containskey(key)) {	
 resourcetoolkit key found removing 
 
+========================= sharpdevelop sample_1579 =========================
+
 return true;	}	}	commandwrapper commandwrapper;	if (keytable.trygetvalue(keypressed, out commandwrapper)) {	if (commandwrapper.commandid == menucommands.delete) {	if (!formdesigner.enabledelete) {	return false;	}	}	
 run menu command 
+
+========================= sharpdevelop sample_2885 =========================
 
 public static void installaddins(list<string> disabled) {	if (!directory.exists(addininstalltemp)) return;	
 addinmanager installaddins started 
@@ -1234,11 +1480,15 @@ addinmanager installaddins finished
 static bool uninstalladdin(list<string> disabled, string addinname, string targetdir) {	if (directory.exists(targetdir)) {	
 removing 
 
+========================= sharpdevelop sample_4503 =========================
+
 public idisposable subscribe(iobserver<searchedfile> observer) {	
 parallel findall starting 
 
 public idisposable subscribe(iobserver<searchedfile> observer) {	var task = task.factory.startnew( delegate {	var list = filelist.tolist();	throwifcancellationrequested();	searchparallel(list, observer);	}, taskcreationoptions.longrunning);	task.continuewith( t => {	
 parallel findall finished with error successfully 
+
+========================= sharpdevelop sample_615 =========================
 
 public void load() {	string currentlanguage = service.currentlanguage;	string logmessage = "loading resources " + baseresourcename + "." + currentlanguage + ": ";	resourcemanager manager = null;	if (assembly.getmanifestresourceinfo(baseresourcename + "." + currentlanguage + ".resources") != null) {	
 loading from main assembly 
@@ -1249,6 +1499,8 @@ loading from main assembly no country match
 manager = new resourcemanager(baseresourcename + "." + currentlanguage, assembly);	} else if (currentlanguage.indexof('-') > 0 && assembly.getmanifestresourceinfo(baseresourcename + "." + currentlanguage.split('-')[0] + ".resources") != null) {	manager = new resourcemanager(baseresourcename + "." + currentlanguage.split('-')[0], assembly);	} else {	manager = trysatellite(currentlanguage);	if (manager == null && currentlanguage.indexof('-') > 0) {	manager = trysatellite(currentlanguage.split('-')[0]);	}	}	if (manager == null) {	
 not found 
 
+========================= sharpdevelop sample_4552 =========================
+
 static void runapplication() {	#if debug try {	console.outputencoding = system.text.encoding.default;	} catch (ioexception) {	}	
 starting sharpdevelop 
 
@@ -1258,20 +1510,28 @@ aborting startup arguments will be handled by previous instance
 }	};	workbenchsettings workbenchsettings = new workbenchsettings();	workbenchsettings.runonnewthread = false;	for (int i = 0; i < filelist.length; i++) {	workbenchsettings.initialfilelist.add(filelist[i]);	}	sdtracelistener.install();	host.runworkbench(workbenchsettings);	} finally {	
 leaving runapplication 
 
+========================= sharpdevelop sample_4671 =========================
+
 public static extern bool lockwindowupdate(intptr hwndlock);	#endregion private intptr hookhandler( intptr hwnd, int msg, intptr wparam, intptr lparam, ref bool handled ) {	handled = false;	switch (msg) {	case sc_move: case wm_windowposchanging: safefireevent<eventargs>(windowposchanging, eventargs.empty);	break;	case wm_mouseactivate: {	canceleventargs args = new canceleventargs();	safefireevent<canceleventargs>(windowactivating, args);	if (args.cancel) {	
 cancelled 
 
 }	break;	case wm_activate: {	if (((int)wparam & 0xffff) != wa_inactive) {	canceleventargs args = new canceleventargs();	safefireevent<canceleventargs>(windowactivating, args);	if (args.cancel) {	if (lparam != intptr.zero) {	setactivewindow(lparam);	}	
 cancelled activation 
 
+========================= sharpdevelop sample_536 =========================
+
 protected static void checkautoinvoke(type type, arraylist outmembers, string starttype, string[] props) {	memberinfo[] memberstype = new memberinfo[props.length + 1];	if (type.name.equals(starttype)) {	memberinfo member = loadautoinvoketypes(outmembers, memberstype, props, 0);	if (member == null) return;	memberstype[memberstype.length - 1] = type;	_autoinvokehash.add(member, memberstype);	
 classcache found match for 
+
+========================= sharpdevelop sample_68 =========================
 
 runner.verbose = addinoptions.verbose;	runner.workingdirectory = workingdirectory;	runner.quiet = addinoptions.quiet;	runner.showlogo = addinoptions.showlogo;	runner.debugmode = addinoptions.debugmode;	if (debug) {	runner.arguments = string.concat("-d:debug=true ", addinoptions.nantarguments, " ", args, " ", target);	} else {	runner.arguments = string.concat(addinoptions.nantarguments, " ", args, " ", target);	}	
 running nant 
 
 protected void stopbuild() {	if (isbuildrunning) {	if (messageservice.askquestion(stringparser.parse("this will terminate the nant process.  are you sure?"))) {	runner.stop();	
 nant build stopped 
+
+========================= sharpdevelop sample_39 =========================
 
 public iviewcontent openfile(filename filename, bool switchtoopenedview) {	if (filename == null) throw new argumentnullexception("filename");	
 open file 
@@ -1284,6 +1544,8 @@ fileservice jumping to file position x
 
 navigationservice.resumelogging();	loggingresumed = true;	positionable.jumpto(math.max(1, line), math.max(1, column));	} else {	navigationservice.resumelogging();	loggingresumed = true;	navigationservice.log(content);	}	return content;	} finally {	
 fileservice jumped to file position x 
+
+========================= sharpdevelop sample_4614 =========================
 
 registerassembly(asm);	return asm;	}	} catch (notsupportedexception) {	}	}	string hash = gethash(filename);	lock (assemblydict) {	assembly asm;	if (assemblydict.trygetvalue(hash, out asm)) return asm;	
 loading assembly hash 
@@ -1312,11 +1574,15 @@ typeresolutionservice assemblyresolveeventhandler
 return asm;	}	}	foreach (assembly asm in appdomain.currentdomain.getassemblies()) {	if (asm.fullname == args.name) {	lastassembly = asm;	}	}	if (lastassembly != null) {	typeresolutionservice.designerassemblies.add(lastassembly);	
 icsharpassemblyresolver found 
 
+========================= sharpdevelop sample_4946 =========================
+
 public system.resources.iresourcewriter getresourcewriter(cultureinfo info) {	try {	
 resourcewriter requested for culture 
 
 public system.resources.iresourcereader getresourcereader(system.globalization.cultureinfo info) {	try {	
 resourcereader requested for culture 
+
+========================= sharpdevelop sample_2926 =========================
 
 public static void copydirectory(string directoryname, directorynode node, bool includeinproject) {	directoryname = fileutility.normalizepath(directoryname);	string copiedfilename = path.combine(node.directory, path.getfilename(directoryname));	
 copy to 
@@ -1327,8 +1593,12 @@ searching for child items in
 foreach (iproject project in projectservice.opensolution.projects) {	if (!fileutility.isbasedirectory(project.directory, directoryname)) continue;	foreach (projectitem item in project.items) {	fileprojectitem fileitem = item as fileprojectitem;	if (fileitem == null) continue;	string virtualfullname = path.combine(project.directory, fileitem.virtualname);	if (fileutility.isbasedirectory(directoryname, virtualfullname)) {	if (item.itemtype == itemtype.folder && fileutility.isequalfilename(directoryname, virtualfullname)) {	continue;	}	
 found file 
 
+========================= sharpdevelop sample_5202 =========================
+
 public void handleerror(builderror error) {	
 fxcoplogger got 
+
+========================= sharpdevelop sample_1848 =========================
 
 string outputname = path + '\\' + entry.key.tostring();	if (entry.value is icon) {	extension = ".ico";	if (!directory.exists(path)) directory.createdirectory(path);	((icon)entry.value).save(file.create(outputname + extension));	} else if (entry.value is image) {	extension = ".png";	if (!directory.exists(path)) directory.createdirectory(path);	((image)entry.value).save(outputname + extension, imageformat.png);	} else {	
 can t save unknown format 
@@ -1396,8 +1666,12 @@ displays this help
 static void showhelp() {	
 info gives additional information about resasm 
 
+========================= sharpdevelop sample_369 =========================
+
 public void addservicereference() {	compilermessageview.instance.bringtofront();	uri uri = getserviceuri();	if (uri == null) return;	try {	servicegenerator.options.servicename = defaultnamespace;	servicegenerator.options.url = uri.tostring();	servicegenerator.addservicereference();	} catch (exception ex) {	
 failed to add service reference 
+
+========================= sharpdevelop sample_5313 =========================
 
 public virtual void convertcontentdefinition(codemembermethod method, textwriter writer) {	
 generate code for 
@@ -1405,8 +1679,12 @@ generate code for
 public void convertcontentdefinition(codememberfield field, textwriter writer) {	
 generate field declaration for 
 
+========================= sharpdevelop sample_2903 =========================
+
 public dockingmanager() {	
 dockingmanager ctr 
+
+========================= sharpdevelop sample_513 =========================
 
 previous = node;	}	}	foreach (node node in allnodes) {	if (!string.isnullorempty(node.codon.insertbefore)) {	foreach (string beforereference in node.codon.insertbefore.split(',')) {	node referencednode;	if (nametonodedict.trygetvalue(beforereference, out referencednode)) {	referencednode.previous.add(node);	} else {	
 codon specified in the insertbefore of the codon does not exist 
@@ -1414,23 +1692,35 @@ codon specified in the insertbefore of the codon does not exist
 } else {	}	}	}	if (!string.isnullorempty(node.codon.insertafter)) {	foreach (string afterreference in node.codon.insertafter.split(',')) {	node referencednode;	if (nametonodedict.trygetvalue(afterreference, out referencednode)) {	node.previous.add(referencednode);	} else {	
 codon specified in the insertafter of the codon does not exist 
 
+========================= sharpdevelop sample_4502 =========================
+
 public override bool saveoptions() {	try {	viewmodel.save();	return true;	} catch (exception ex) {	
 unable to save nuget config changes 
+
+========================= sharpdevelop sample_956 =========================
 
 #if debug console.writeline(file.readalltext(reallogfile));	#endif xmldocument doc = new xmldocument();	doc.load(reallogfile);	foreach (xmlnode node in doc.documentelement.selectnodes(". xmlelement el = node as xmlelement;	if (el == null) continue;	result = false;	string checkid = el.getattribute("checkid");	string keyword = el.getattribute("keyword");	string message = el["exceptionmessage"].innertext;	if (checkid.length > 0) {	
 category target 
 
+========================= sharpdevelop sample_595 =========================
+
 public void storememento(iviewcontent viewcontent) {	imementocapable mementocapable = viewcontent.getservice<imementocapable>();	if (mementocapable != null && loaddocumentproperties) {	if (viewcontent.primaryfilename == null) return;	string key = getmementokeyname(viewcontent);	
 saving memento of to key 
 
+========================= sharpdevelop sample_4615 =========================
+
 static loadedassembly tryreadfromcache(string cachefilename, datetime lastwritetime) {	if (cachefilename == null || !file.exists(cachefilename)) return null;	try {	using (filestream fs = new filestream(cachefilename, filemode.open, fileaccess.read, fileshare.read | fileshare.delete, 4096, fileoptions.sequentialscan)) {	using (binaryreader reader = new binaryreaderwith7bitencodedints(fs)) {	if (reader.readint64() != lastwritetime.ticks) {	
 timestamp mismatch deserialization aborted 
+
+========================= sharpdevelop sample_4584 =========================
 
 static string outputtypetoconfigurationtype(outputtype outputtype) {	switch (outputtype) {	case icsharpcode.sharpdevelop.project.outputtype.exe: return "application";	case icsharpcode.sharpdevelop.project.outputtype.library: return "dynamiclibrary";	
 netmodule output not supported will produce a class library 
 
 static outputtype configurationtypetooutputtype(string configurationtype, string subsystem) {	if ("application" == configurationtype && "windows" != subsystem) return icsharpcode.sharpdevelop.project.outputtype.exe;	else if ("application" == configurationtype && "windows" == subsystem) return icsharpcode.sharpdevelop.project.outputtype.winexe;	else if ("dynamiclibrary" == configurationtype) return icsharpcode.sharpdevelop.project.outputtype.library;	
 configurationtype is not supported will use library output type 
+
+========================= sharpdevelop sample_3978 =========================
 
 public void addcreator(toolboxitemcreatorcallback creator, string format, idesignerhost host) {	
 defaulttoolboxservice addcreator 
@@ -1450,17 +1740,27 @@ toolboxservice gettoolboxitems category
 public toolboxitemcollection gettoolboxitems(string category, idesignerhost host) {	
 toolboxservice gettoolboxitems category host 
 
+========================= sharpdevelop sample_2927 =========================
+
 protected override void logeventsfromtextoutput(string singleline, messageimportance messageimportance) {	compilererror error = parseline(singleline);	if (error != null) {	if (error.iswarning) {	log.logwarning("warning", error.errornumber, null, error.filename, error.line, error.column, error.line, error.column, error.errortext);	} else {	
 error 
+
+========================= sharpdevelop sample_279 =========================
 
 public override void run() {	abstractprojectbrowsertreenode node = owner as abstractprojectbrowsertreenode;	iproject project = (node != null) ? node.project : projectservice.currentproject;	if (project == null) {	return;	}	
 show add reference dialog for 
 
+========================= sharpdevelop sample_5203 =========================
+
 public virtual void generatecodefromcodedom(system.codedom.codecompileunit compileunit, textwriter writer) {	var provider = this.createcodedomprovider();	if (provider != null) {	var options = new system.codedom.compiler.codegeneratoroptions();	options.blanklinesbetweenmembers = ambienceservice.codegenerationproperties.get("blanklinesbetweenmembers", true);	options.bracingstyle             = ambienceservice.codegenerationproperties.get("startblockonsameline", true) ? "block" : "c";	options.elseonclosing            = ambienceservice.codegenerationproperties.get("elseonclosing", true);	options.indentstring = sd.editorcontrolservice.globaloptions.indentationstring;	provider.generatecodefromcompileunit(compileunit, writer, options);	} else {	
 no codedom provider was found for this language 
 
+========================= sharpdevelop sample_5110 =========================
+
 smalllist.images.add(sd.resourceservice.getbitmap("icons.32x32.emptyprojecticon"));	imglist.images.add(sd.resourceservice.getbitmap("icons.32x32.emptyprojecticon"));	int i = 0;	foreach (iimage icon in icons.keys.toarray()) {	bitmap bitmap = icon.bitmap;	if (bitmap != null) {	smalllist.images.add(bitmap);	imglist.images.add(bitmap);	icons[icon] = ++i;	} else {	
 newprojectdialog can t load bitmap using default 
+
+========================= sharpdevelop sample_5246 =========================
 
 public void trycatchfinally() {	try {	
 try 
@@ -1474,8 +1774,12 @@ try
 public void trycatchmultiplehandlers() {	try {	}	catch (invalidoperationexception ex) {	console.writeline(ex.message);	}	catch (exception ex2) {	console.writeline(ex2.message);	}	catch {	
 other 
 
+========================= sharpdevelop sample_432 =========================
+
 public virtual void savetodisk() {	if (isuntitled) throw new invalidoperationexception("cannot save an untitled file to disk!");	
 save 
+
+========================= sharpdevelop sample_4936 =========================
 
 public void writeformatheader(solutionformatversion version) {	writer.writeline();	
 microsoft visual studio solution file format version 
@@ -1513,6 +1817,8 @@ global
 public void writeglobalsections(isolution solution) {	writeglobalsection(generatesolutionconfigurationsection(solution));	writeglobalsection(generateprojectconfigurationsection(solution));	foreach (var section in solution.globalsections) {	writeglobalsection(section);	}	writeglobalsection(generatenestingsection(solution));	
 endglobal 
 
+========================= sharpdevelop sample_4590 =========================
+
 public override void onapplytemplate() {	var resizer = gettemplatechild("part_resizer") as resizer;	if (resizer != null) resizer.dragstarted += (s, e) => {	isresizing = true;	showresizeroverlaywindow(s as resizer);	
 resizer dragstarted rect 
 
@@ -1521,6 +1827,8 @@ resizer dragdelta rect
 
 double newheight = maxheight - canvas.gettop(_resizerghost);	top -= newheight - height;	height = newheight;	applyregion(new rect(0, 0, this.width, this.height));	}	break;	}	isresizing = false;	saveflyoutsizetocontent();	hideresizeroverlaywindow();	
 resizer dragcompleted rect 
+
+========================= sharpdevelop sample_546 =========================
 
 public void initsharpdevelopcore(sharpdevelophost.callbackhelper callback, startupsettings properties) {	var container = new sharpdevelopservicecontainer();	container.addfallbackprovider(servicesingleton.fallbackserviceprovider);	container.addservice(typeof(imessageservice), new sdmessageservice());	container.addservice(typeof(iloggingservice), new log4netloggingservice());	servicesingleton.serviceprovider = container;	
 initsharpdevelop 
@@ -1533,6 +1841,8 @@ loading addintree
 
 startup.configureuseraddins(path.combine(configdirectory, "addininstalltemp"), path.combine(configdirectory, "addins"));	}	startup.runinitialization();	((assemblyparserservice)sd.assemblyparserservice).dompersistencepath = properties.dompersistencepath;	project.projectservice.buildstarted   += delegate { this.callback.startbuild(); };	project.projectservice.buildfinished  += delegate { this.callback.endbuild(); };	project.projectservice.solutionloaded += delegate { this.callback.solutionloaded(); };	project.projectservice.solutionclosed += delegate { this.callback.solutionclosed(); };	fileutility.fileloaded += delegate(object sender, filenameeventargs e) { this.callback.fileloaded(e.filename); };	fileutility.filesaved  += delegate(object sender, filenameeventargs e) { this.callback.filesaved(e.filename); };	
 initsharpdevelop finished 
+
+========================= sharpdevelop sample_4573 =========================
 
 public void start(processstartinfo info) {	if (info == null) throw new argumentnullexception("info");	process.startinfo = info;	
 workerprocess starting 
@@ -1555,8 +1865,12 @@ waiting for thread join
 public void dispose() {	isdisposed = true;	hosttoworkerpipe.dispose();	if (thread.currentthread != readerthread) {	if (!readerthread.join(3000)) {	kill();	readerthread.join();	}	
 joined 
 
+========================= sharpdevelop sample_4611 =========================
+
 public override bool saveoptions() {	try {	var viewmodel = datacontext as packagemanagementoptionsviewmodel;	viewmodel.saveoptions();	return true;	} catch (exception ex) {	
 unable to save nuget config changes 
+
+========================= sharpdevelop sample_1051 =========================
 
 public static system.drawing.rectangle validate(system.drawing.rectangle bounds) {	
 number of screens 
@@ -1567,11 +1881,15 @@ screen validating intersection
 public static system.drawing.rectangle validate(system.drawing.rectangle bounds) {	foreach (var screen in screen.allscreens) {	var rect = system.drawing.rectangle.intersect(bounds, screen.workingarea);	if (rect.width > 10 && rect.height > 10) return bounds;	}	
 validating center on screen 
 
+========================= sharpdevelop sample_5151 =========================
+
 public type gettype(string name, bool throwonerror, bool ignorecase) {	if (name == null || name.length == 0) {	return null;	}	#if debug if (!name.startswith("system.",stringcomparison.invariantcultureignorecase)) {	
 typeresolutionservice looking for 
 
 public void referenceassembly(assemblyname name) {	
 todo add assembly reference 
+
+========================= sharpdevelop sample_1558 =========================
 
 public override void writeto(itextoutput output) {	
 try 
@@ -1591,11 +1909,15 @@ case
 public override void writeto(itextoutput output) {	if (this.values != null) {	foreach (int i in this.values) {	}	} else {	
 default 
 
+========================= sharpdevelop sample_468 =========================
+
 static void main(string[] args) {	while (true) {	random r = new random();	
 running 
 
 static void main(string[] args) {	while (true) {	random r = new random();	thread.sleep(100);	for (int i = 0; i < r.next(1, 200); i++) {	
 i 
+
+========================= sharpdevelop sample_2064 =========================
 
 static void run(object state) {	
 git overlayiconmanager thread started 
@@ -1603,14 +1925,20 @@ git overlayiconmanager thread started
 static void run(object state) {	thread.sleep(100);	while (true) {	if (sd.parserservice.loadsolutionprojectsthread.isrunning) {	thread.sleep(100);	}	abstractprojectbrowsertreenode node;	lock (queue) {	if (queue.count == 0) {	
 git overlayiconmanager thread finished 
 
+========================= sharpdevelop sample_3248 =========================
+
 public resourceresolveresult resolve(string filename, idocument document, int caretline, int caretcolumn, char? chartyped) {	if (filename == null || document == null) {	
 resourcetoolkit resolve called with null filename or document argument 
 
 public resourceresolveresult resolve(string filename, idocument document, int caretline, int caretcolumn, char? chartyped) {	if (filename == null || document == null) {	return null;	}	if (caretline < 0 || caretcolumn < 0 || caretline >= document.totalnumberoflines || caretcolumn >= document.getline(caretline + 1).totallength) {	
 resourcetoolkit resolve called with invalid position arguments 
 
+========================= sharpdevelop sample_1621 =========================
+
 protected override void onmousemove(system.windows.input.mouseeventargs e) {	base.onmousemove(e);	var point = e.getposition(this);	
 posiion 
+
+========================= sharpdevelop sample_1980 =========================
 
 public int run(string[] args) {	this.parsecommandline(args);	if (this.showlogo) {	assembly me = assembly.getexecutingassembly();	
 help registration utility v 
@@ -1660,8 +1988,12 @@ removehelpplugin
 private void namespacemerge(object sender, mergenamespaceeventargs e) {	
 mergehelpnamespace 
 
+========================= sharpdevelop sample_377 =========================
+
 }	if (((_usename && docompare(node.getsearchnamestring())) || (_usevalue && docompare(node.getsearchvaluestring()))) && !(node is intermediatetreenode)) _nodefound(this, node);	bool continuesearch = true;	if (node.hassearchchildren(this)) {	foreach (isearchnode childnode in node.getsearchchildren()) {	continuesearch = searchinternal(childnode, level + 1);	if (!continuesearch) break;	}	}	if (!continuesearch) {	
 search cancelled 
+
+========================= sharpdevelop sample_114 =========================
 
 public void writeexceptions() {	console.writeline();	
 unhandled exceptions 
@@ -1693,6 +2025,8 @@ unhandled exceptions
 if ( --level == 0) {	trace.writeline( "############################################################################" );	if (messages.count == 0) {	}	else {	foreach ( string s in messages ) {	trace.writeline(s);	}	}	trace.writeline( "############################################################################" );	
 total time seconds 
 
+========================= sharpdevelop sample_367 =========================
+
 public override bool execute() {	if (monotoollocationhelper.ismonoinstalled) {	
 targetframeworkversion 
 
@@ -1702,20 +2036,28 @@ monoframeworkpath
 public override bool execute() {	if (monotoollocationhelper.ismonoinstalled) {	path = monotoollocationhelper.getpathtomonoframework(targetframeworkversion);	return true;	}	
 mono is not installed 
 
+========================= sharpdevelop sample_276 =========================
+
 static void rungetrulelist(object state) {	request request = (request)state;	
 trying to find fxcop rules 
 
 if (fxcoppath != null) {	try {	rules = getrulelistandsort(fxcoppath, request.ruleassemblies);	} catch (exception ex) {	loggingservice.warn(ex);	rules = new list<fxcopcategory>();	}	} else {	rules = new list<fxcopcategory>();	}	
 finished getting fxcop rules invoking callback 
 
+========================= sharpdevelop sample_1846 =========================
+
 continue;	}	}	try {	addderivedtypes(basetype, asm, types);	} catch (filenotfoundexception) {	} catch (fileloadexception) {	} catch (badimageformatexception) {	}	}	
 typediscoveryservice returns types 
+
+========================= sharpdevelop sample_2928 =========================
 
 objects.add(objnode);	}	else {	nodes.remove(node);	}	}	}	graphics g = cb.creategraphics();	int maxwidth = 0;	foreach (treenode node in nodes) {	
 setobjectvalue looking node 
 
 throw new exception("error converting value " + "for struct member " + field.name, ex);	}	}	else {	if (!fieldtype.equals(_type)) {	fieldvalue = getstructvalues (fieldtype, fieldtype.getfields (reflectionhelper.all_bindings), ref controlindex);	}	else continue;	}	if (traceutil.if(this, tracelevel.verbose)) {	
 struct field val 
+
+========================= sharpdevelop sample_171 =========================
 
 static guid finduserid() {	string[] othersharpdevelopversions;	try {	othersharpdevelopversions = directory.getdirectories(path.combine(propertyservice.configdirectory, ".."));	} catch (ioexception) {	othersharpdevelopversions = new string[0];	} catch (unauthorizedaccessexception) {	othersharpdevelopversions = new string[0];	}	
 looking for existing udc database in directories 
@@ -1738,17 +2080,27 @@ analyticsmonitor could not upgrade database
 session = new usagedatasessionwriter(dbfilename, finduserid);	} catch (incompatibledatabaseexception ex) {	if (ex.actualversion < ex.expectedversion) {	guid? olduserid = usagedatasessionwriter.retrieveuserid(dbfilename);	trydeletedatabase();	try {	session = new usagedatasessionwriter(dbfilename, () => (olduserid ?? finduserid()));	} catch (incompatibledatabaseexception ex2) {	}	} else {	
 analyticsmonitor 
 
+========================= sharpdevelop sample_1631 =========================
+
 public static ienumerable<calltreenode> withquerylog(this ienumerable<calltreenode> items, textwriter logoutput) {	if (items == null) throw new argumentnullexception("items");	if (logoutput == null) throw new argumentnullexception("logoutput");	iqueryable<calltreenode> query = items as iqueryable<calltreenode>;	if (query != null) return query.withquerylog(logoutput);	
 the query did not use linq to profiler 
+
+========================= sharpdevelop sample_2074 =========================
 
 public void disassemble(methodbody body, methoddebugsymbols debugsymbols) {	methoddefinition method = body.method;	
 output writeline maxstack 
 
+========================= sharpdevelop sample_478 =========================
+
 public nantpadcontent() {	
 nantpadcontent ctor 
 
+========================= sharpdevelop sample_23 =========================
+
 public override void getdetailtext() {	if (_container == null && _typelibstring != null && _typelibversion != null) {	try {	_container = typelibrary.gettypelib (new guid(_typelibstring), _typelibversion);	_typelib = (typelibrary)_container;	}	catch (exception ex) {	
 error getting typelib for ex 
+
+========================= sharpdevelop sample_72 =========================
 
 public void read() {	var document = new xmldocument();	try {	document.load(filename);	}	catch (xmlexception ex) {	
 error reading machine specifications test results 
@@ -1756,8 +2108,12 @@ error reading machine specifications test results
 public void dispose() {	join();	try {	file.delete(filename);	} catch (exception ex) {	
 could delete temporary file 
 
+========================= sharpdevelop sample_1852 =========================
+
 public void setmemento(properties memento) {	
 workbench setmemento not implemented 
+
+========================= sharpdevelop sample_322 =========================
 
 if ((resolveresult = nrefactoryastcacheservice.resolvenextouterexpression(ref expressionresult, caretline, caretcolumn, filename, filecontent, expressionfinder)) != null) {	return resolveresource(resolveresult, expr);	} else {	return null;	}	}	}	} else {	languageproperties lp = nrefactoryresourceresolver.getlanguagepropertiesforfile(filename);	if (lp != null && !string.isnullorempty(lp.indexerexpressionstarttoken) && lp.indexerexpressionstarttoken[0] == chartyped) {	
 resourcetoolkit bclnrefactoryresourceresolver indexer expression start typed resolveresult 
@@ -1828,6 +2184,8 @@ resourcetoolkit bclnrefactoryresourceresolver found key
 #endif return key;	}	}	}	} else if (fre.membername == "applyresources") {	if (invocation.arguments.count >= 2) {	primitiveexpression p = invocation.arguments[1] as primitiveexpression;	if (p != null) {	string key = p.value as string;	if (key != null) {	
 resourcetoolkit bclnrefactoryresourceresolver found key prefix 
 
+========================= sharpdevelop sample_1611 =========================
+
 protected override codecompileunit parse() {	
 nrefactorydesignerloader parse 
 
@@ -1836,6 +2194,8 @@ nrefactorydesignerloader parse finished
 
 protected override void write(codecompileunit unit) {	
 designerloader write called 
+
+========================= sharpdevelop sample_2908 =========================
 
 public override void visitspan(span span) {	
 span kind 
@@ -1846,8 +2206,12 @@ span gettype
 public override void visitspan(span span) {	
 span content 
 
+========================= sharpdevelop sample_3872 =========================
+
 }	}	} else if (operand is fieldreference) {	var fd = ((fieldreference)operand).resolve();	if (fd != null && assemblies.contains(fd.declaringtype.module.assembly) && mappings.cecilmappings.containskey(fd)) {	var fieldnode = mappings.fieldmappings[(ifield)mappings.cecilmappings[fd]];	mappings.addedge(fieldnode);	}	}	} catch (assemblyresolutionexception are) {	
 cqa skipping operand reference exception 
+
+========================= sharpdevelop sample_1984 =========================
 
 public override void beginload(idesignerloaderhost host){	
 reportdesignerloader beginload 
@@ -1858,8 +2222,12 @@ reportdesignerloader performload
 protected override void performflush(idesignerserializationmanager designerserializationmanager){	
 reportdesignerloader performflush 
 
+========================= sharpdevelop sample_1547 =========================
+
 static void processfolder(xelement folder, ziparchive thezip, string folderrelativepath) {	string targetdirectory = (string)folder.attribute("name");	string currentrelativepath = appendrelativepath(folderrelativepath, targetdirectory);	
 processing folder 
+
+========================= sharpdevelop sample_357 =========================
 
 static int main(string[] args) {	try {	mainclass m = new mainclass();	int count;	if (args.length == 0) {	environment.currentdirectory = path.getfullpath(@"..\..\..\..\..");	
 checking files in src 
@@ -1870,11 +2238,15 @@ checking files in
 try {	mainclass m = new mainclass();	int count;	if (args.length == 0) {	environment.currentdirectory = path.getfullpath(@"..\..\..\..\..");	count = m.run("src");	} else {	environment.currentdirectory = path.getfullpath(args[0]);	count = m.run(".");	}	
 finished checked files changed files ignored files 
 
+========================= sharpdevelop sample_363 =========================
+
 public static void stop(string desc) {	stopwatch watch = stopwatches.pop();	watch.stop();	
 desc took ms 
 
 public static idisposable time(string text) {	#if debug stopwatch watch = stopwatch.startnew();	return new callbackondispose( delegate {	watch.stop();	
 text took ms 
+
+========================= sharpdevelop sample_4838 =========================
 
 task task = iotaskscheduler.factory.startnew( delegate {	pc = pc.removeassemblyreferences(pc.assemblyreferences);	int serializablefilecount = 0;	list<string> nonserializableunresolvedfiles = new list<string>();	foreach (var unresolvedfile in pc.files) {	if (isserializable(unresolvedfile)) serializablefilecount++;	else nonserializableunresolvedfiles.add(unresolvedfile.filename);	}	if (nonserializableunresolvedfiles.count > 0) pc = pc.removefiles(nonserializableunresolvedfiles);	if (serializablefilecount > 3) {	
 serializing files to 
@@ -1885,8 +2257,12 @@ deserializing
 static iprojectcontent tryreadfromcache(string cachefilename) {	if (cachefilename == null || !file.exists(cachefilename)) return null;	try {	using (filestream fs = new filestream(cachefilename, filemode.open, fileaccess.read, fileshare.read | fileshare.delete, 4096, fileoptions.sequentialscan)) {	using (binaryreader reader = new binaryreaderwith7bitencodedints(fs)) {	if (reader.readint32() != cachemagicnumber) {	
 incorrect magic number 
 
+========================= sharpdevelop sample_4869 =========================
+
 for (int i = 0; i < array.length; i++) {	array[i] = (t)deserialize(serializedarray[i], typeof(t));	}	return array;	} catch (xamlobjectwriterexception ex) {	loggingservice.warn(ex);	} catch (notsupportedexception ex) {	loggingservice.warn(ex);	}	} else {	
 properties getlist this entry is not a list 
+
+========================= sharpdevelop sample_4548 =========================
 
 public printtimes(string text): base(text + " - end") {	
 start 
@@ -1894,11 +2270,15 @@ start
 public void dispose() {	stopwatch.stop();	
 ms 
 
+========================= sharpdevelop sample_3379 =========================
+
 static void run(object state) {	
 svn overlayiconmanager thread started 
 
 thread.sleep(2);	while (true) {	if (sd.parserservice.loadsolutionprojectsthread.isrunning) {	thread.sleep(100);	}	abstractprojectbrowsertreenode node;	lock (queue) {	if (queue.count == 0) {	threadrunning = false;	clearstatuscache();	
 svn overlayiconmanager thread finished 
+
+========================= sharpdevelop sample_3239 =========================
 
 public static void formatoutput (iexporttext textcolumn) {	if (string.isnullorwhitespace(textcolumn.text)) {	return;	}	if (textcolumn.name == "xy") {	
 stop 
@@ -1908,6 +2288,8 @@ stop
 
 static string formatdecimal(string toformat, string format){	string str = string.empty;	if (checkvalue (toformat)) {	try {	decimal number =	decimal.parse(toformat, numberstyles.any, cultureinfo.currentculture.numberformat);	str = number.tostring (format,cultureinfo.currentculture);	} catch (formatexception) {	
 standardformatter incorrectformat 
+
+========================= sharpdevelop sample_1359 =========================
 
 protected void setobject(object obj) {	
 setobject 
@@ -1933,14 +2315,20 @@ field of value
 while (true) {	iobjectnode parentobjnode;	parentobjnode = objectnode.parentobjectnode;	if (parentobjnode == null) break;	if (parentobjnode.objectinfo.objmemberinfo == null) break;	if (!(parentobjnode.objectinfo.objmemberinfo is propertyinfo)) break;	propertyinfo propinfo = (propertyinfo)parentobjnode.objectinfo.objmemberinfo;	try {	propinfo.setvalue(parentobjnode.parentobjectnode.obj, parentobjnode.obj, parentobjnode.currentpropindexvalues);	} catch (exception ex) {	
 exception in setvalue in property propagation for prop ex 
 
+========================= sharpdevelop sample_80 =========================
+
 static void 한글test() {	
 could write 한글 
+
+========================= sharpdevelop sample_2055 =========================
 
 }	var codenamespace = new codenamespace(designerclass.namespace);	codenamespace.types.add(codeclass);	var codeunit = new codecompileunit();	codeunit.namespaces.add(codenamespace);	#if debug if ((control.modifierkeys & keys.control) == keys.control) {	codedomverboseoutputgenerator outputgenerator = new codedomverboseoutputgenerator();	outputgenerator.generatecodefrommember(codemethod, console.out, null);	this.codedomprovider.generatecodefromcompileunit(codeunit, console.out, null);	}	
 nrefactorydesignerloader parse finished 
 
 protected override void write(codecompileunit unit) {	
 designerloader write called 
+
+========================= sharpdevelop sample_4035 =========================
 
 public static void enablecache() {	if (cacheenabled) {	throw new invalidoperationexception("the ast cache is already enabled.");	}	cacheenabled = true;	
 resourcetoolkit nrefactoryastcacheservice cache enabled 
@@ -1965,6 +2353,8 @@ resourcetoolkit nrefactoryastcacheservice resolvelowlevel failed nrefactoryresol
 
 inode membernode;	if (!cacheenabled || !cachedmembermappings.trygetvalue(resolver.callingmember, out membernode)) {	memberfindastvisitor visitor = new memberfindastvisitor(resolver.callingmember);	compilationunit.acceptvisitor(visitor, null);	membernode = visitor.membernode;	if (cacheenabled && membernode != null) {	cachedmembermappings.add(resolver.callingmember, membernode);	}	}	if (membernode == null) {	
 resourcetoolkit nrefactoryastcacheservice could not find member in ast 
+
+========================= sharpdevelop sample_1610 =========================
 
 public override void dispose() {	try {	icomponentchangeservice componentchangeservice = (icomponentchangeservice)this.getservice(typeof(icomponentchangeservice));	if (componentchangeservice != null) {	
 forms designer removing componentadded handler for nested container setup 
@@ -1999,8 +2389,12 @@ designerloader onendload error
 protected override void onendload(bool successful, icollection errors) {	this.loading = false;	try {	base.onendload(successful, errors);	} catch(exceptioncollection e) {	foreach(exception ine in e.exceptions) {	}	throw;	} catch(exception e) {	
 designerloader onendload error 
 
+========================= sharpdevelop sample_2909 =========================
+
 this.componentchangeservice.componentchanging += new componentchangingeventhandler(oncomponentchanging);	}	menucommandservice = (menucommandservice)getservice(typeof(menucommandservice));	if (menucommandservice != null) {	m_menucommands = new menucommand[]	{	new menucommand(new eventhandler(onmenucut), standardcommands.cut), new menucommand(new eventhandler(onmenucopy), standardcommands.copy), new menucommand(new eventhandler(onmenudelete), standardcommands.delete) };	foreach(menucommand mc in m_menucommands) {	m_menucommandservice.addcommand(mc);	}	
 rootdesigner menuservice set 
+
+========================= sharpdevelop sample_1523 =========================
 
 public void extendselection() {	astnode selectednode = null;	ilist<astnode> commentsblanklines;	var parsedcu = parsedocument(editor, out commentsblanklines);	if (parsedcu == null)	return;	isegment oldselection = new textsegment { startoffset = editor.selectionstart, length = editor.selectionlength };	selection extendedselection = extendselection(editor, parsedcu, commentsblanklines, out selectednode, new type[] { typeof(astnode) });	selecttext(extendedselection, editor);	if (previousselections.count == 0 || !(previousselections.peek().offset == oldselection.offset && previousselections.peek().endoffset == oldselection.endoffset)) {	previousselections.push(oldselection);	
 pushed 
@@ -2011,8 +2405,12 @@ not accepted
 public void shrinkselection() {	if (previousselections.count < 1) return;	var selection = previousselections.pop();	editor.select(selection.offset, selection.length);	
 popped 
 
+========================= sharpdevelop sample_4001 =========================
+
 public void initialize(icorprofilerinfo picorprofilerinfounk) {	
 profiling initialized 
+
+========================= sharpdevelop sample_197 =========================
 
 }	else {	getpackageoperations();	if (caninstallpackage()) {	installpackage(_packageoperations);	}	}	}	catch (exception ex) {	reporterror(ex);	
 error when trying to install package 
@@ -2020,11 +2418,17 @@ error when trying to install package
 private void tryuninstallingpackage() {	try {	uninstallpackage();	}	catch (exception ex) {	reporterror(ex);	
 error when trying to uninstall package 
 
+========================= sharpdevelop sample_1675 =========================
+
 public static void addviewcontent(iviewcontent viewcontent){	if (viewcontent == null) throw new argumentnullexception("viewcontent");	if (!initialised) initialise();	if (standardsidetab == null) {	
 creating reporting sidetab 
 
+========================= sharpdevelop sample_1517 =========================
+
 public  defaultservicecontainer () {	servicecontainer = new servicecontainer();	
 init servicecontaier 
+
+========================= sharpdevelop sample_1556 =========================
 
 public static void adddependentitemstoproject(func<ienumerable<fileprojectitem>> itemadder) {	directorynode dir = projectbrowserpad.instance.projectbrowsercontrol.selecteddirectorynode;	if (dir == null) return;	filenode filenode = projectbrowserpad.instance.projectbrowsercontrol.selectednode as filenode;	if (filenode == null) {	
 projectbrowser addnewdependentitemstoproject called on node that is not a filenode but 
@@ -2034,6 +2438,8 @@ projectbrowser addnewdependentitemstoproject on
 
 filenode filenode = projectbrowserpad.instance.projectbrowsercontrol.selectednode as filenode;	if (filenode == null) {	return;	}	var addeditems = itemadder();	if (addeditems == null) return;	filenode = dir.allnodes.oftype<filenode>().single(node => fileutility.isequalfilename(node.filename, filenode.filename));	var dict = addeditems .where(fpi => string.isnullorempty(fpi.dependentupon)) .todictionary( fpi => dir.allnodes.oftype<filenode>().single( node => node.projectitem == fpi ) );	if (dict.count == 0) return;	foreach (keyvaluepair<filenode, fileprojectitem> pair in dict) {	
 projectbrowser addnewdependentitemstoproject creating dependency for upon 
+
+========================= sharpdevelop sample_5198 =========================
 
 }	return 0;	}	if (!file.exists("sharpdevelop.sln")) {	string maindir = path.getfullpath(path.combine(exedir, "../../../../.."));	if (file.exists(maindir + "\\sharpdevelop.sln")) {	directory.setcurrentdirectory(maindir);	}	}	if (!file.exists("sharpdevelop.sln")) {	
 working directory must be sharpdevelop 
@@ -2047,6 +2453,8 @@ the revision number of the sharpdevelop version being compiled could not be retr
 static void readrevisionfromfile() {	try {	xdocument doc = xdocument.load("revision");	revisionnumber = (string)doc.root.element("revision");	gitcommithash = (string)doc.root.element("commithash");	gitbranchname = (string)doc.root.element("branchname");	} catch (exception e) {	console.writeline(e.message);	console.writeline();	console.writeline();	
 build continues with revision number 
 
+========================= sharpdevelop sample_362 =========================
+
 public static void main(string[] args) {	list<int> allocationsizes = new list<int>();	
 functioninfo bit 
 
@@ -2059,8 +2467,12 @@ stack bit
 for (int i = 1; i < 27; i++) {	allocationsizes.add(8 * (1<<i) + 24);	}	console.writeline(findperfecthash(allocationsizes.toarray(), 32));	allocationsizes.clear();	allocationsizes.add(3 * 4 + 4);	for (int i = 64; i <= 1024 * 1024; i *= 2) {	allocationsizes.add(12 * i);	}	console.writeline(findperfecthash(allocationsizes, 16));	
 stack bit 
 
+========================= sharpdevelop sample_2045 =========================
+
 public static void set(string value, string setting) {	if (value.tolower().equals("t")) {	traceutil.level = (tracelevel)convert.toint32(setting);	
 trace level set to 
+
+========================= sharpdevelop sample_57 =========================
 
 protected virtual void ondragmousedown(object sender, mousebuttoneventargs e) {	
 ondragmousedown 
@@ -2080,8 +2492,12 @@ try to set kb focus to
 #endregion dispatcher.begininvoke(dispatcherpriority.input, new threadstart(delegate {	if (isactivecontent && !iskeyboardfocused) {	if (defaultelement != null) {	iinputelement kbfocused = keyboard.focus(defaultelement);	if (kbfocused != null) debug.writeline("focused element " + kbfocused);	}	else if (content is uielement && content is dependencyobject) {	(content as uielement).focus();	iinputelement kbfocused = keyboard.focus(this.content as iinputelement);	if (kbfocused != null) debug.writeline("focused element " + kbfocused);	
 no focused element 
 
+========================= sharpdevelop sample_558 =========================
+
 public isettings loadsettings() {	try {	return loadsettings(getsolutiondirectory());	} catch (exception ex) {	
 unable to load nuget config file 
+
+========================= sharpdevelop sample_939 =========================
 
 public override bool hassearchchildren(isearcher searcher) {	searcher.reportstatus("reading: ", getname(prefer_description));	try {	_searchmode = true;	readtypelibinfo();	_searchmode = false;	} catch (exception ex) {	
 exception reading typelib info during find ex 
@@ -2125,14 +2541,20 @@ typelib resolved assy
 protected void populatefromregistry(typelibkey typelibkey) {	
 typelib populatefromregistry 
 
+========================= sharpdevelop sample_63 =========================
+
 public void notifynodeexpandedchanged(t changednode) {	
 hierarchylist start notifynodeexpandedchanged 
 
 if (changednode.isexpanded) {	foreach (t node in getvisiblechildren(changednode.children)) {	base.insert(index++, node);	}	} else {	int visiblechildren = changednode.children.sum(c => c.visibleelementcount);	for (int i = visiblechildren - 1; i >= 0; i--) {	base.removeat(index + i);	}	}	
 hierarchylist end notifynodeexpandedchanged 
 
+========================= sharpdevelop sample_2020 =========================
+
 for (int i = disposabletypes.length - 1; i >= 0; i--) {	idisposable disposable = null;	lock (services) {	object serviceinstance;	if (services.trygetvalue(disposabletypes[i], out serviceinstance)) {	disposable = serviceinstance as idisposable;	if (disposable != null) services.remove(disposabletypes[i]);	}	}	if (disposable != null) {	
 service shutdown 
+
+========================= sharpdevelop sample_4848 =========================
 
 public designerview (openedfile openedfile,idesignergenerator generator) : base(openedfile){	if (openedfile == null) {	throw new argumentnullexception("openedfile");	}	
 designerview load from 
@@ -2158,6 +2580,8 @@ reportdesigner createdesigneroptions
 public override void load(openedfile file, stream stream) {	
 reportdesigner load from 
 
+========================= sharpdevelop sample_1542 =========================
+
 return null;	} else if ((pe = expr as primitiveexpression) != null) {	if (pe.value is string) {	if (foundstringliteral) {	return null;	}	if (!result.region.isempty) {	caretoffset = document.positiontooffset(result.region.beginline, result.region.begincolumn) - 2;	if (caretoffset < 0) return null;	} else {	
 resourcetoolkit nrefactoryresourceresolver found string literal but result region is empty trying to infer position from text 
 
@@ -2178,6 +2602,8 @@ resourcetoolkit nrefactoryresourceresolver getresourcesetreference looking for a
 
 return new resourcesetreference(resourcename, filename);	}	if (resourcepart.contains(".")) {	resourcepart = resourcepart.substring(resourcepart.indexof('.')+1);	} else {	break;	}	}	}	}	
 resourcetoolkit nrefactoryresourceresolver getresourcesetreference is unable to find a suitable resource file for 
+
+========================= sharpdevelop sample_1614 =========================
 
 string srcdir = @"..\..\..\..\";	debug.writeline(path.getfullpath(srcdir));	list<xmlelement> doozers = new list<xmlelement>();	list<xmlelement> conditions = new list<xmlelement>();	if (!readxmldocu(srcdir + "main\\base\\project\\icsharpcode.sharpdevelop.csproj", doozers, conditions)) return;	processstartinfo info = new processstartinfo("cmd", "/c debugbuild.bat");	info.workingdirectory = path.getfullpath(path.combine(srcdir, ".."));	debug.writeline(info.workingdirectory + ">" + info.filename + " " + info.arguments);	process p = process.start(info);	if (!p.waitforexit(60000)) {	
 msbuild did not exit 
@@ -2275,6 +2701,8 @@ msbuild did not exit
 string args = path.getfilename(projectfilename) + " \"/p:documentationfile=" + docfile +  "\" \"/p:nowarn=1591 1573 1574 1572 419\"";	string msbuild = path.combine(path.getdirectoryname(typeof(object).assembly.location), "msbuild.exe");	processstartinfo info = new processstartinfo(msbuild, args);	info.workingdirectory = path.getdirectoryname(projectfilename);	debug.writeline(info.workingdirectory + ">" + info.filename + " " + info.arguments);	process p = process.start(info);	if (!p.waitforexit(60000)) {	return null;	}	if (p.exitcode != 0) {	
 msbuild exit code 
 
+========================= sharpdevelop sample_376 =========================
+
 output.write(">");	if (showlinenumbers) {	output.write("<span");	writestyle(output, linenumberstyle);	output.write('>');	output.write(linenumber.tostring().padleft(longestnumberlength));	output.write(":  ");	output.write("</span>");	}	printwords(output, line);	
 pre 
 
@@ -2284,11 +2712,15 @@ div
 }	} else {	output.write("<pre");	writestyle(output, mymainstyle + linestyle);	output.writeline(">");	for (int linenumber = 1; linenumber <= document.linecount; linenumber++) {	highlightedline line = highlighter.highlightline(linenumber);	printwords(output, line);	output.writeline();	}	
 pre 
 
+========================= sharpdevelop sample_294 =========================
+
 public override void execute(object parameter) {	if (parameter == null) throw new argumentnullexception("parameter");	filetemplateresult result = (filetemplateresult)parameter;	var openedfile = result.newopenedfiles.single();	var wizardviewmodel = new reportwizardcontext();	var reportwizard = new icsharpcode.reporting.addin.reportwizard.dialog.reportwizard(wizardviewmodel);	reportwizard.showdialog();	if (reportwizard.dialogresult.hasvalue && reportwizard.dialogresult.value){	
 reportwizard createreport 
 
 var wizardviewmodel = new reportwizardcontext();	var reportwizard = new icsharpcode.reporting.addin.reportwizard.dialog.reportwizard(wizardviewmodel);	reportwizard.showdialog();	if (reportwizard.dialogresult.hasvalue && reportwizard.dialogresult.value){	var rg = new reportgenerator();	rg.generate(wizardviewmodel);	string xml = createformsheetfrommodel.toxml(rg.reportmodel).tostring();	openedfile.setdata(encoding.utf8.getbytes(xml));	if (!openedfile.isuntitled) openedfile.savetodisk();	} else {	
 reportwizard canceled 
+
+========================= sharpdevelop sample_1477 =========================
 
 internaltrace.initialize("nunit-console_%p.log", level);	log.info("nunit-console.exe starting");	if(!options.nologo) writecopyright();	if(options.help) {	options.help();	return consoleui.ok;	}	if (options.cleanup) {	log.info("performing cleanup of shadow copy cache");	domainmanager.deleteshadowcopypath();	
 shadow copy cache emptied 
@@ -2320,23 +2752,33 @@ os version
 object[] objectattrs = executingassembly.getcustomattributes(typeof(assemblycopyrightattribute), false);	if ( objectattrs.length > 0 ) copyrighttext = ((assemblycopyrightattribute)objectattrs[0]).copyright;	objectattrs = executingassembly.getcustomattributes(typeof(assemblyconfigurationattribute), false);	if (objectattrs.length > 0) {	string configtext = ((assemblyconfigurationattribute)objectattrs[0]).configuration;	if (configtext != "") versiontext += string.format(" ({0})", configtext);	}	console.writeline(copyrighttext);	console.writeline();	runtimeframework framework = runtimeframework.currentframework;	
 clr version 
 
+========================= sharpdevelop sample_366 =========================
+
 public override bool tryshowhelp(string fulltypename) {	if (string.isnullorempty(fulltypename)) {	throw new argumentnullexception("fulltypename");	}	
 helpviewer tryshowhelp calls 
 
 public override bool tryshowhelpbykeyword(string keyword) {	if (string.isnullorempty(keyword)) {	throw new argumentnullexception("keyword");	}	
 helpviewer tryshowhelpbykeyword calls 
 
+========================= sharpdevelop sample_1715 =========================
+
 string cultureext = path.getextension(path.getfilenamewithoutextension(filename));	if (!string.isnullorempty(cultureext)) {	try {	this.culture = cultureinfo.getcultureinfo(cultureext.substring(1));	} catch (argumentexception) {	this.culture = cultureinfo.invariantculture;	}	} else {	this.culture = cultureinfo.invariantculture;	}	
 resourcetoolkit created resourcefilecontent file culture name 
 
+========================= sharpdevelop sample_1595 =========================
+
 protected override string generatefullpathtotool() {	string path = toollocationhelper.getpathtodotnetframeworkfile(toolname, targetdotnetframeworkversion.versionlatest);	if (path == null) {	
 general frameworksfilenotfound 
+
+========================= sharpdevelop sample_337 =========================
 
 protected void processchildproperties(xmlnode node, object parent) {	type t=parent.gettype();	foreach(xmlnode child in node.childnodes){	if (child is xmlelement) {	string pname=child.localname;	if (string.equals(pname,"items")) {	pname = "controls";	}	propertyinfo pi=t.getproperty(pname);	if (pi==null) {	
 unsupported property 
 
 try {	if (tc.canconvertfrom(typeof(string))) {	object val=tc.convertfrominvariantstring(value);	pi.setvalue(obj, val, null);	} else if (pi.propertytype == typeof(type)) {	pi.setvalue(obj, type.gettype(value), null);	}	}	catch(exception e) {	var s = string.format(cultureinfo.currentculture,"property setter for {0} failed {1}\r\n",pi.name, e.message);	
 mycroparser 
+
+========================= sharpdevelop sample_1503 =========================
 
 public resolveresult resolve(filename filename, textlocation location, itextsource filecontent, icompilation compilation, cancellationtoken cancellationtoken) {	var entry = getfileentry(filename, true);	if (entry.parser == null || location.isempty) return errorresolveresult.unknownerror;	iproject project = compilation != null ? compilation.getproject() : null;	var parseinfo = entry.parse(filecontent, project, cancellationtoken);	if (parseinfo == null) return errorresolveresult.unknownerror;	if (compilation == null) compilation = getcompilationforfile(filename);	resolveresult rr = entry.parser.resolve(parseinfo, location, compilation, cancellationtoken);	
 resolved to 
@@ -2346,6 +2788,8 @@ resolved to
 
 public task<resolveresult> resolveasync(filename filename, textlocation location, itextsource filecontent, icompilation compilation, cancellationtoken cancellationtoken) {	var entry = getfileentry(filename, true);	if (entry.parser == null || location.isempty) return task.fromresult<resolveresult>(errorresolveresult.unknownerror);	iproject project = compilation != null ? compilation.getproject() : null;	return entry.parseasync(filecontent, project, cancellationtoken).continuewith( delegate (task<parseinformation> parseinfotask) {	var parseinfo = parseinfotask.result;	if (parseinfo == null) return errorresolveresult.unknownerror;	if (compilation == null) compilation = getcompilationforfile(filename);	resolveresult rr = entry.parser.resolve(parseinfo, location, compilation, cancellationtoken);	
 resolved to 
+
+========================= sharpdevelop sample_4579 =========================
 
 output.writeline();	output.unindent();	}	output.writeline("{");	output.indent();	bool oldisintype = isintype;	isintype = true;	writeattributes(type.customattributes);	writesecuritydeclarations(type);	if (type.haslayoutinfo) {	
 pack 
@@ -2385,4 +2829,6 @@ module
 
 if (module.hasexportedtypes) {	foreach (exportedtype exportedtype in module.exportedtypes) {	output.write(".class extern ");	if (exportedtype.isforwarder) output.write("forwarder ");	output.write(exportedtype.declaringtype != null ? exportedtype.name : exportedtype.fullname);	openblock(false);	if (exportedtype.declaringtype != null) output.writeline(".class extern {0}", disassemblerhelpers.escape(exportedtype.declaringtype.fullname));	closeblock();	}	}	
 output writeline 
+
+========================= sharpdevelop sample_479 =========================
 

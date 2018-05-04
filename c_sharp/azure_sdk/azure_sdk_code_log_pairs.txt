@@ -55,11 +55,15 @@ name value
 mytask.filestostage.add(wordsdottext);	mytask.stagefiles();	return mytask.resourcefiles;	}	private void outputfailureinfo(taskfailureinformation failureinfo) {	this.testoutputhelper.writeline("    details:" + (null == failureinfo.details ? " <null>" : string.empty));	if (null != failureinfo.details) {	foreach (namevaluepair curdetail in failureinfo.details) {	}	}	
 message 
 
+========================= azure_sdk sample_5810 =========================
+
 private void keymustthrowargumentexception( string paramname, jsonwebkey key ) {	var serialized = key.tostring();	try {	var deserialized = jsonconvert.deserializeobject<jsonwebkey>( serialized );	assert.equal( key, deserialized );	}	catch ( targetinvocationexception ex ) {	
 warning key with bad value on can be serialized but not deserialized 
 
 public static void emitvariable( string collectionname, int keysize, jsonwebkey key ) {	var text = key.tostring();	text = text.replace( "\"", "\\\"" );	text = text.replace( "\r\n", "\\r\\n" );	
 add 
+
+========================= azure_sdk sample_2122 =========================
 
 public async task bug1360227_addtasksbatchfailure(bool usejoboperations) {	const string testname = "bug1360227_addtasksbatchfailure";	int count = 0;	const int counttofailat = 102;	const int taskcount = 407;	hashset<string> taskidsexpectedtofail = new hashset<string>();	func<addtaskresult, cancellationtoken, addtaskresultstatus> resulthandlerfunc = (result, token) => {	
 task got status code 
@@ -94,11 +98,15 @@ task add finished took
 await boundjob.addtaskasync( taskstoadd, paralleloptions: paralleloptions, filestagingartifacts: filestagingartifacts, timeout: timeout, additionalbehaviors: behaviors).configureawait(continueoncapturedcontext: false);	}	stopwatch.stop();	if (lastfilestostagelist != null) {	testutilities.assertthrows<invalidoperationexception>(() => lastfilestostagelist.add(new filetostage("test", null)));	}	list<cloudtask> tasksfromservice = await joboperations.listtasks(jobid).tolistasync().configureawait(false);	ensuretaskslistsmatch(taskstovalidatewith, tasksfromservice);	}	catch (exception e) {	
 exception 
 
+========================= azure_sdk sample_5795 =========================
+
 protected task removenode(servermanagementclient client, string nodename) {	try {	
 removing node 
 
 protected async task removegateway(servermanagementclient client, string gatewayname) {	try {	
 removing gateway 
+
+========================= azure_sdk sample_7882 =========================
 
 assert.true(boundpool.autoscaleenabled.hasvalue);	assert.true(boundpool.autoscaleenabled.value);	assert.equal(poolasformulaorig, boundpool.autoscaleformula);	autoscalerun eval = boundpool.evaluateautoscale(poolasformula2);	assert.contains(poolasformula2, eval.results);	boundpool.disableautoscale();	boundpool.refresh();	assert.true(boundpool.autoscaleenabled.hasvalue);	assert.false(boundpool.autoscaleenabled.value);	while (allocationstate.steady != boundpool.allocationstate) {	
 waiting for pool to be steady before enableautoscale call 
@@ -160,11 +168,15 @@ verifiedimagerefs sku
 public void listnodeagentskus() {	action test = () => {	using (batchclient batchcli = testutilities.openbatchclientasync(testutilities.getcredentialsfromenvironment()).result) {	var nas = batchcli.pooloperations.listnodeagentskus().tolist();	assert.true(nas.count > 0);	foreach (nodeagentsku curnas in nas) {	foreach (imagereference verifiedimagereference in curnas.verifiedimagereferences) {	
 verifiedimagerefs version 
 
+========================= azure_sdk sample_5804 =========================
+
 public static void deletejobifexistsnothrow(batchserviceclient client, string jobid, itestoutputhelper output) {	try {	client.job.delete(jobid);	}	catch (batcherrorexception e) {	
 job failed to delete 
 
 public static void deletepoolifexistsnothrow(batchserviceclient client, string poolid, itestoutputhelper output) {	try {	client.pool.delete(poolid);	}	catch (batcherrorexception e) {	
 pool failed to delete 
+
+========================= azure_sdk sample_5791 =========================
 
 public override bool execute() {	try {	strongnameutility utility = new strongnameutility();	if (!utility.validatestrongnametoolexistance(windowssdkpath)) {	
 the strong name tool sn exe could not be located within the windows sdk directory structure 
@@ -174,6 +186,8 @@ the assembly path has not been strong named signed
 
 bool success = utility.execute(arguments, out output);	if (!success) {	log.logerror(output);	return false;	}	int lastspace = output.lastindexof(' ');	if (lastspace >= 0) {	output = output.substring(lastspace + 1).trim();	}	if (output != expectedtokensignature) {	
 the assembly had the strong name token of but was expected to have the token 
+
+========================= azure_sdk sample_10 =========================
 
 new filetostage(resources.localwordsdottext, storagecreds) };	var artifacts = boundjob.addtask(mytask);	var specificartifact = artifacts[typeof(filetostage)];	sequentialfilestagingartifact sfsa = specificartifact as sequentialfilestagingartifact;	assert.notnull(sfsa);	cloudpool boundpool = batchcli.pooloperations.getpool(boundjob.executioninformation.poolid);	taskstatemonitor taskstatemonitor = batchcli.utilities.createtaskstatemonitor();	taskstatemonitor.waitall( boundjob.listtasks(), microsoft.azure.batch.common.taskstate.completed, timespan.fromminutes(10), controlparams: null, additionalbehaviors: new[]	{	new microsoft.azure.batch.protocol.requestinterceptor((x) => {	
 issuing request type 
@@ -217,20 +231,28 @@ task add finished took
 await boundjob.addtaskasync( taskstoadd, paralleloptions: paralleloptions, filestagingartifacts: filestagingartifacts, timeout: timeout, additionalbehaviors: behaviors).configureawait(continueoncapturedcontext: false);	}	stopwatch.stop();	if (lastfilestostagelist != null) {	assert.throws<invalidoperationexception>(() => lastfilestostagelist.add(new filetostage("test", null)));	}	list<cloudtask> tasksfromservice = await joboperations.listtasks(jobid).tolistasync().configureawait(false);	ensuretaskslistsmatch(taskstovalidatewith, tasksfromservice);	}	catch (exception e) {	
 exception 
 
+========================= azure_sdk sample_5706 =========================
+
 public async task testcertificateverbs() {	func<task> test = async () => {	using (batchclient batchcli = await testutilities.openbatchclientasync(testutilities.getcredentialsfromenvironment())) {	const string certificateprefix = "testcertificatecrud";	string cerfilepath = integrationtestcommon.gettemporarycertificatefilepath(string.format("{0}.cer", certificateprefix));	string pfxfilepath = integrationtestcommon.gettemporarycertificatefilepath(string.format("{0}.pfx", certificateprefix));	ienumerable<certificate> certificates = generatecertificates(batchcli, cerfilepath, pfxfilepath);	try {	foreach (certificate certificate in certificates) {	
 adding certificate with thumbprint 
 
 public async task testpoolcertificatereferenceswithupdate() {	func<task> test = async () => {	using (batchclient batchcli = await testutilities.openbatchclientasync(testutilities.getcredentialsfromenvironment())) {	const string certificateprefix = "poolwithcertificatereferences";	string cerfilepath = integrationtestcommon.gettemporarycertificatefilepath(string.format("{0}.cer", certificateprefix));	string pfxfilepath = integrationtestcommon.gettemporarycertificatefilepath(string.format("{0}.pfx", certificateprefix));	ienumerable<certificate> certificates = generatecertificates(batchcli, cerfilepath, pfxfilepath);	try {	foreach (certificate certificate in certificates) {	
 adding certificate with thumbprint 
 
+========================= azure_sdk sample_5801 =========================
+
 else {	sdkprojects = projutil.getscopedsdkprojects(buildscope);	testprojects = projutil.getscopedtestprojects(buildscope);	}	allprojects.addrange(sdkprojects);	allprojects.addrange(testprojects);	concurrentbag<sdkprojectmetadata> projwithmetadata = new concurrentbag<sdkprojectmetadata>();	var projtimebefore = datetime.now;	projwithmetadata = getprojectdata(allprojects, projwithmetadata);	var projtimeafter = datetime.now;	
 parsing projects took 
+
+========================= azure_sdk sample_6 =========================
 
 public void testhandcodedenumsmatchswaggergeneratedenums() {	typeinfo arbitraryhandcraftedenum = typeof(jobstate).gettypeinfo();	string handcraftedenumnamespace = arbitraryhandcraftedenum.namespace;	list<type> enumtypes = arbitraryhandcraftedenum.assembly.gettypes().where(t => t.gettypeinfo().isenum && t.namespace == handcraftedenumnamespace).tolist();	typeinfo arbitrarygeneratedenum = typeof(protocol.models.jobstate).gettypeinfo();	string generatedenumnamespace = arbitrarygeneratedenum.namespace;	list<type> generatedenumtypes = arbitrarygeneratedenum.assembly.gettypes().where(t => t.gettypeinfo().isenum && t.namespace == generatedenumnamespace).tolist();	
 generated types 
 
 typeinfo arbitraryhandcraftedenum = typeof(jobstate).gettypeinfo();	string handcraftedenumnamespace = arbitraryhandcraftedenum.namespace;	list<type> enumtypes = arbitraryhandcraftedenum.assembly.gettypes().where(t => t.gettypeinfo().isenum && t.namespace == handcraftedenumnamespace).tolist();	typeinfo arbitrarygeneratedenum = typeof(protocol.models.jobstate).gettypeinfo();	string generatedenumnamespace = arbitrarygeneratedenum.namespace;	list<type> generatedenumtypes = arbitrarygeneratedenum.assembly.gettypes().where(t => t.gettypeinfo().isenum && t.namespace == generatedenumnamespace).tolist();	foreach (type generatedenumtype in generatedenumtypes) {	this.testoutputhelper.writeline(generatedenumtype.tostring());	}	this.testoutputhelper.writeline("");	
 handcrafted types 
+
+========================= azure_sdk sample_6441 =========================
 
 using (mockcontext context = mockcontext.start(this.gettype().fullname)) {	var resourcesclient = resourcesmanagementtestutilities.getresourcemanagementclientwithhandler(context, handler1);	var networkmanagementclient = networkmanagementtestutilities.getnetworkmanagementclientwithhandler(context, handler2);	var location = networkmanagementtestutilities.getresourcelocation(resourcesclient, "microsoft.network/virtualnetworkgateways");	string resourcegroupname = testutilities.generatename("csmrg");	resourcesclient.resourcegroups.createorupdate(resourcegroupname, new resourcegroup {	location = location });	string publicipname = testutilities.generatename();	string domainnamelabel = testutilities.generatename();	var nic1publicip = testhelper.createdefaultpublicipaddress(publicipname, resourcegroupname, domainnamelabel, location, networkmanagementclient);	
 publicipaddress gateway ip 
@@ -313,8 +335,12 @@ virtual network gatewaysubnet id
 new virtualnetworkgatewayipconfiguration() {	name = ipconfigname, privateipallocationmethod = ipallocationmethod.dynamic, publicipaddress = new subresource() {	id = nic1publicip.id }, subnet = new subresource() {	id = getsubnetresponse.id }	}	}, sku = new virtualnetworkgatewaysku() {	name = virtualnetworkgatewayskuname.standard, tier = virtualnetworkgatewayskutier.standard }	};	var putvirtualnetworkgatewayresponse = networkmanagementclient.virtualnetworkgateways.createorupdate(resourcegroupname, virtualnetworkgatewayname, virtualnetworkgateway);	assert.equal("succeeded", putvirtualnetworkgatewayresponse.provisioningstate);	
 virtual network gateway is deployed successfully 
 
+========================= azure_sdk sample_3235 =========================
+
 public override bool execute() {	if (timeoutmiliseconds == 0) timeoutmiliseconds = default_task_timeout;	threadtask.task waitingtask = threadtask.task.run(() => {	
 press any key to continue or it will continue in seconds 
+
+========================= azure_sdk sample_7 =========================
 
 timespan duration = endtime.subtract(starttime);	taskcompletionsource.setresult(duration);	});	cancellationduration = await taskcompletionsource.task;	token.throwifcancellationrequested();	return new azureoperationresponse<protocol.models.cloudjob, protocol.models.jobgetheaders>() { body = new protocol.models.cloudjob() };	};	});	await assert.throwsasync<operationcanceledexception>(async () => await client.joboperations.getjobasync("dummy", additionalbehaviors: new list<batchclientbehavior> { requestinterceptor }));	}	
 there were requests executed 
@@ -336,6 +362,8 @@ there were requests executed
 
 private async task batchrequestcancellationviaparametertestasync(methodinfo method, object o, timespan? clientrequesttimeoutviacustomtoken) {	assert.notnull(clientrequesttimeoutviacustomtoken);	using (cancellationtokensource cancellationtokensource = new cancellationtokensource(clientrequesttimeoutviacustomtoken.value)) {	batchunittestcancellationexception e = await assert.throwsasync<batchunittestcancellationexception>( async () => await invokecancellationtokenmethodasync(method, o, cancellationtokensource.token));	
 took to cancel task 
+
+========================= azure_sdk sample_6443 =========================
 
 unboundjob.commit();	cloudjob boundjob = batchcli.joboperations.getjob(jobid);	cloudtask mytask = new cloudtask(id: "bug1480489task", commandline: @"md bug1480489directory");	boundjob.addtask(mytask);	utilities utilities = batchcli.utilities;	taskstatemonitor taskstatemonitor = utilities.createtaskstatemonitor();	taskstatemonitor.waitall( boundjob.listtasks(), microsoft.azure.batch.common.taskstate.completed, timespan.fromminutes(3));	cloudtask mycompletedtask = new list<cloudtask>(boundjob.listtasks(null))[0];	string stdout = mycompletedtask.getnodefile(constants.standardoutfilename).readasstring();	string stderr = mycompletedtask.getnodefile(constants.standarderrorfilename).readasstring();	
 taskid 
@@ -442,6 +470,8 @@ downloading the stdout for the file
 cloudjob boundjob = joboperations.getjob(jobid);	const string taskid = "t1";	const string taskmessage = "this is a test";	cloudtask task = new cloudtask(taskid, string.format("cmd /c echo {0}", taskmessage));	boundjob.addtask(task);	utilities utilities = batchcli.utilities;	taskstatemonitor taskstatemonitor = utilities.createtaskstatemonitor();	taskstatemonitor.waitall( joboperations.listtasks(jobid), taskstate.completed, timespan.fromseconds(30));	nodefile file = joboperations.getnodefile(jobid, taskid, "stdout.txt");	string data = file.readasstring(encoding: encoding.utf8);	
 data 
 
+========================= azure_sdk sample_5799 =========================
+
 public void exceptionsthrowndirectlybyrestproxydontchange() {	const string exceptionnamecapturegroup = "exceptionname";	string pattern = getexceptioncaptureregex(exceptionnamecapturegroup);	sourceparser sourceparser = new sourceparser(this.proxysourcelocation, sourcefiletype, null, pattern);	list<sourceparserresult> results = sourceparser.parse().tolist();	const int expectedexceptioncount = 100;	
 found strings 
 
@@ -462,6 +492,8 @@ exceptions
 
 public void dotwaitanddotresultareneverused() {	const string pattern = "(?<! sourceparser sourceparser = new sourceparser(this.sourcelocation, sourcefiletype, null, pattern);	list<sourceparserresult> results = sourceparser.parse().tolist();	results.remove(results.first(r => r.file.contains("utilitiesinternal.cs")));	results.remove(results.first(r => r.file.contains("synchronousmethodexceptionbehavior.cs")));	foreach (sourceparserresult parserresult in results) {	
 found wait or result in at 
+
+========================= azure_sdk sample_6447 =========================
 
 for (int i = 0; i < 50; i++) {	cloudtask curtask = new cloudtask("bug957878-task-" + i.tostring(), "hostname");	thejob.addtask(curtask);	numtaskscreated++;	}	int numtasksseen = 0;	bug957878replacementinterceptorbox box0 = new bug957878replacementinterceptorbox(this.testoutputhelper);	foreach (cloudtask curtask in thejob.listtasks(additionalbehaviors: new[] {	new microsoft.azure.batch.protocol.requestreplacementinterceptor(box0.bug957878requestreplacementinterceptoropcontextfactory)})) {	numtasksseen++;	
 task id 
@@ -619,6 +651,8 @@ even pools
 }	#region test helpers private class bug1770942retrypolicy : iretrypolicy {	public int numtimescalled { get; private set; }	private readonly itestoutputhelper testoutputhelper;	public bug1770942retrypolicy(itestoutputhelper testoutputhelper) {	this.testoutputhelper = testoutputhelper;	}	public task<retrydecision> shouldretryasync(exception exception, operationcontext operationcontext) {	timespan retryinterval = timespan.zero;	this.numtimescalled++;	
 exception 
 
+========================= azure_sdk sample_5808 =========================
+
 var context = new authenticationcontext(authority, tokencache);	var result = await context.acquiretokenasync(resource, clientcredential).configureawait(false);	return result.accesstoken;	}	public async task<string> getuseraccesstoken(string authority, string resource, string scope) {	string clientid = testconfigurationmanager.trygetenvironmentorappsetting("nativeclientid");	var context = new authenticationcontext(authority, tokencache);	if (_devicecodeforstoragetests == null) {	_devicecodeforstoragetests = await context.acquiredevicecodeasync(resource, clientid).configureawait(false);	debug.writeline("############################################################################################");	
 test won t run until you perform following steps 
 
@@ -630,6 +664,8 @@ insert following user code devicecodeforstoragetests usercode
 
 var context = new authenticationcontext(authority, tokencache);	var result = await context.acquiretokenasync(resource, clientcredential).configureawait(false);	return result.accesstoken;	}	public async task<string> getuseraccesstoken(string authority, string resource, string scope) {	string clientid = testconfigurationmanager.trygetenvironmentorappsetting("nativeclientid");	var context = new authenticationcontext(authority, tokencache);	if (_devicecodeforstoragetests == null) {	_devicecodeforstoragetests = await context.acquiredevicecodeasync(resource, clientid).configureawait(false);	debug.writeline("############################################################################################");	
 login with your username and password credentials 
+
+========================= azure_sdk sample_2249 =========================
 
 public void testireadonlymakespropertiesreadonly() {	type ireadonlytype = typeof(ireadonly);	list<type> typeswithireadonlybase = gettypeswhichimplementinterface(ireadonlytype.gettypeinfo().assembly, ireadonlytype, requirepublicconstructor: false).tolist();	foreach (type type in typeswithireadonlybase) {	
 reading setting properties of type 
@@ -643,6 +679,8 @@ attempting to read property
 public void testgettransportobjectdoesntmissproperties() {	const int objectstovalidate = 100;	type itransportobjectprovidertype = typeof(itransportobjectprovider<>);	ienumerable<type> types = gettypeswhichimplementinterface(itransportobjectprovidertype.gettypeinfo().assembly, itransportobjectprovidertype, requirepublicconstructor: false);	foreach (type type in types) {	
 generating objects of type 
 
+========================= azure_sdk sample_6462 =========================
+
 public void bug1910530_concurrentchangetrackedlistthreadsafetest() {	const string testname = "bug1910530_concurrentchangetrackedlistthreadsafetest";	using(batchclient batchcli = batchclient.open(clientunittestcommon.createdummysharedkeycredential())) {	jobscheduleoperations jobscheduleoperations = batchcli.jobscheduleoperations;	string jobscheduleid = microsoft.azure.batch.constants.defaultconvenienceprefix + "-" + testname;	
 creating job schedule 
 
@@ -652,11 +690,15 @@ adding an item
 const string testname = "bug1910530_concurrentchangetrackedlistthreadsafetest";	using(batchclient batchcli = batchclient.open(clientunittestcommon.createdummysharedkeycredential())) {	jobscheduleoperations jobscheduleoperations = batchcli.jobscheduleoperations;	string jobscheduleid = microsoft.azure.batch.constants.defaultconvenienceprefix + "-" + testname;	cloudjobschedule unboundjobschedule = jobscheduleoperations.createjobschedule(jobscheduleid, null, null);	unboundjobschedule.metadata = new list<metadataitem>();	action addaction = () => {	unboundjobschedule.metadata.add(new metadataitem("test", "test"));	};	action removeaction = () => {	
 removing an item 
 
+========================= azure_sdk sample_6446 =========================
+
 topic topic = new topic() {	location = location, tags = originaltagsdictionary };	var createtopicresponse = this.eventgridmanagementclient.topics.createorupdate(resourcegroup, topicname, topic);	assert.notnull(createtopicresponse);	assert.equal(createtopicresponse.name, topicname);	testutilities.wait(timespan.fromseconds(60));	topicsharedaccesskeys keys = this.eventgridmanagementclient.topics.listsharedaccesskeys(resourcegroup, topicname);	string topichostname = new uri(createtopicresponse.endpoint).host;	topiccredentials topiccredentials = new topiccredentials(keys.key1);	eventgridclient client =  eventgridmanagementhelper.geteventgridclient( context, topiccredentials, new recordeddelegatinghandler { statuscodetoreturn = httpstatuscode.ok });	
 publishing to azure event grid 
 
 location = location, tags = originaltagsdictionary };	var createtopicresponse = this.eventgridmanagementclient.topics.createorupdate(resourcegroup, topicname, topic);	assert.notnull(createtopicresponse);	assert.equal(createtopicresponse.name, topicname);	testutilities.wait(timespan.fromseconds(60));	topicsharedaccesskeys keys = this.eventgridmanagementclient.topics.listsharedaccesskeys(resourcegroup, topicname);	string topichostname = new uri(createtopicresponse.endpoint).host;	topiccredentials topiccredentials = new topiccredentials(keys.key1);	eventgridclient client =  eventgridmanagementhelper.geteventgridclient( context, topiccredentials, new recordeddelegatinghandler { statuscodetoreturn = httpstatuscode.ok });	client.publisheventsasync(topichostname, geteventslist()).getawaiter().getresult();	
 published successfully 
+
+========================= azure_sdk sample_6650 =========================
 
 var cerificatethumbprint = configurationmanager.appsettings["authcertthumbprint"];	var nativeclientid = "fc35ecf8-76f1-4e2c-a075-60d01dc4698f";	var certificate = findcertificatebythumbprint(cerificatethumbprint);	var assertioncert = new clientassertioncertificate(clientid, certificate);	keyvaultclient = new keyvaultclient(new keyvaultclient.authenticationcallback( (authority, resource, scope) => getaccesstoken(authority, resource, scope, assertioncert)), new injecthostheaderhttpmessagehandler());	userkeyvaultclient = new keyvaultclient(new keyvaultclient.authenticationcallback( (authority, resource, scope) => getuseraccesstoken(authority, resource, nativeclientid)), new injecthostheaderhttpmessagehandler());	list<keyoperationtype> successfuloperations = new list<keyoperationtype>();	list<keyoperationtype> failedoperations = new list<keyoperationtype>();	foreach (var operation in inputvalidator.getkeyoperations()) {	try {	
 is in process 
@@ -856,6 +898,8 @@ certificate id
 private static void printoutcertificateoperation(certificateoperation certificateoperation) {	
 certificate opeation status status detail target issuer reference name 
 
+========================= azure_sdk sample_2141 =========================
+
 string jobid = "bug2329884job-" + testutilities.getmyname();	protocol.requestinterceptor interceptor = null;	try {	const string taskid = "hiworld";	cloudjob unboundjob = batchcli.joboperations.createjob(jobid, new poolinformation());	unboundjob.poolinformation.poolid = this.poolfixture.poolid;	unboundjob.commit();	cloudjob boundjob = batchcli.joboperations.getjob(jobid);	cloudtask mytask = new cloudtask(taskid, "cmd /c echo hello world");	boundjob.addtask(mytask);	
 initial job commit 
 
@@ -883,6 +927,8 @@ testcomputenodeuseriaas attempting to delete the following nodeid user
 bob.sshpublickey = "base65==";	bob.commit(computenodeusercommitsemantics.updateuser);	}	finally {	try {	foreach (string curcnuname in cnunamestodelete) {	cn.deletecomputenodeuser(curcnuname);	}	}	catch (exception ex) {	
 testcomputenodeuseriaas exception deleting user account ex 
 
+========================= azure_sdk sample_5793 =========================
+
 public void testjsonsamples<tsample, tresource>(itestoutputhelper logger) {	int failurecount = 0;	int samplecount = 0;	ienumerable<jsonsampleinfo> samples = jsonsamplecommon.getjsonsamplesfromtype<tsample>();	foreach (jsonsampleinfo sampleinfo in samples) {	string samplename = sampleinfo.name;	string serializedjson = string.empty;	samplecount++;	
 testing json sample 
 
@@ -892,8 +938,12 @@ passed
 int samplecount = 0;	ienumerable<jsonsampleinfo> samples = jsonsamplecommon.getjsonsamplesfromtype<tsample>();	foreach (jsonsampleinfo sampleinfo in samples) {	string samplename = sampleinfo.name;	string serializedjson = string.empty;	samplecount++;	try {	testjsonsample<tresource>(sampleinfo);	}	catch (exception ex) {	
 failed exception json 
 
+========================= azure_sdk sample_2373 =========================
+
 "10.1.1.1", "10.1.2.4" }	}, subnets = new list<subnet>() {	new subnet() {	name = gwsubnetname, addressprefix = "10.0.0.0/24", }, new subnet() {	name = subnet2name, addressprefix = "10.0.1.0/24", }	}	};	var putvnetresponse = networkmanagementclient.virtualnetworks.createorupdate(resourcegroupname, vnetname, vnet);	var getvnetresponse = networkmanagementclient.virtualnetworks.get(resourcegroupname, vnetname);	var getsubnetresponse = networkmanagementclient.subnets.get(resourcegroupname, vnetname, gwsubnetname);	
 virtual network gatewaysubnet id 
+
+========================= azure_sdk sample_3229 =========================
 
 system.threading.thread.sleep(5000);	{	bool repeat = true;	while (repeat) {	cloudpool boundpool = batchcli.pooloperations.getpool(this.poolfixture.poolid);	repeat = false;	foreach (cloudtask curtask in boundjob.listtasks()) {	if (curtask.state != microsoft.azure.batch.common.taskstate.completed) {	repeat = true;	this.testoutputhelper.writeline("manual wait task id: " + curtask.id + ", state = " + curtask.state);	
 poolstate currentdedicated 
@@ -973,6 +1023,8 @@ comnpute nodes
 action test = () => {	using (batchclient batchcli = testutilities.openbatchclientfromenvironmentasync().result) {	string jobid = "jobconditionalheaders-" + testutilities.getmyname();	try {	poolinformation poolinfo = new poolinformation() {	poolid = "fake" };	cloudjob unboundjob = batchcli.joboperations.createjob(jobid, poolinfo);	unboundjob.commit();	cloudjob boundjob = batchcli.joboperations.getjob(jobid);	string capturedetag1 = boundjob.etag;	
 etag is 
 
+========================= azure_sdk sample_5797 =========================
+
 private async task<ipage<noderesource>> listnodesinsubscription(servermanagementclient client) {	var nodes = await client.node.listasync();	assert.notnull(nodes);	var found = false;	foreach (var n in nodes) {	found = true;	
 found node in subscription 
 
@@ -1038,6 +1090,8 @@ session get response
 
 assert.notnull(node);	assert.equal(nodename, node.name);	assert.equal(nodename, node.connectionname);	var username =  utility.encryptusinggatewaysettings(gateway.instances[0], nodeusername);	var password =  utility.encryptusinggatewaysettings(gateway.instances[0], nodepassword);	var session = await client.session.createasync(resourcegroup, node.name, sessionidtwo, username, password, retentionperiod.session, credentialdataformat.rsaencrypted);	assert.notnull(session);	assert.equal(session.name, sessionidtwo);	session = await client.session.getasync(resourcegroup, node.name, session.name);	assert.notnull(session);	
 delete session 
+
+========================= azure_sdk sample_7881 =========================
 
 utilities utilities = batchcli.utilities;	taskstatemonitor taskstatemonitor = utilities.createtaskstatemonitor();	taskstatemonitor.waitall( boundjob.listtasks(), microsoft.azure.batch.common.taskstate.completed, timespan.fromminutes(3));	cloudtask mycompletedtask = new list<cloudtask>(boundjob.listtasks())[0];	assert.equal<taskstate?>(taskstate.completed, mycompletedtask.state);	assert.notnull(mycompletedtask.multiinstancesettings);	assert.equal(mycompletedtask.multiinstancesettings.numberofinstances, 3);	assert.equal(mycompletedtask.multiinstancesettings.coordinationcommandline, "cmd /c set");	string stdout = mycompletedtask.getnodefile(constants.standardoutfilename).readasstring();	string stderr = mycompletedtask.getnodefile(constants.standarderrorfilename).readasstring();	
 stdout 
@@ -1180,11 +1234,15 @@ adding task
 cloudtask mytask = new cloudtask(taskid, "cmd /c echo hello world");	boundjob.addtask(mytask);	cloudtask boundtask = batchcli.joboperations.gettask(jobid, taskid);	assert.equal(defaultconstraints.maxtaskretrycount, boundtask.constraints.maxtaskretrycount);	assert.equal(defaultconstraints.maxwallclocktime, boundtask.constraints.maxwallclocktime);	assert.equal(defaultconstraints.retentiontime, boundtask.constraints.retentiontime);	timespan maxwallclocktime = timespan.fromhours(1);	timespan dataretentiontime = timespan.fromhours(2);	const int maxretrycount = 1;	boundtask.constraints = new taskconstraints(maxwallclocktime, dataretentiontime, maxretrycount);	
 updating task constraints 
 
+========================= azure_sdk sample_5796 =========================
+
 public async task ifatrackedfileisisusewhenitisduetobeflushed_thennoerroroccursandchangesarepersisted() {	var file = path.gettempfilename();	try {	var taskoutputstorage = new taskoutputstorage(storageaccount, _jobid, _taskid);	using (await taskoutputstorage.savetrackedasync(taskoutputkind.tasklog, file, "tracked2.txt", timespan.frommilliseconds(5))) {	using (var writer = file.appendtext(file)) {	for (int i = 0; i < 100; ++i) {	await task.delay(timespan.frommilliseconds(3));	
 line i 
 
 var taskoutputstorage = new taskoutputstorage(storageaccount, _jobid, _taskid);	using (await taskoutputstorage.savetrackedasync(taskoutputkind.tasklog, file, "tracked2.txt", timespan.frommilliseconds(5))) {	using (var writer = file.appendtext(file)) {	for (int i = 0; i < 100; ++i) {	await task.delay(timespan.frommilliseconds(3));	await task.delay(timespan.frommilliseconds(3));	}	}	using (var writer = file.appendtext(file)) {	for (int i = 0; i < 100; ++i) {	
 line i 
+
+========================= azure_sdk sample_5734 =========================
 
 const string jobmanagercommandline = "ping 127.0.0.1 -n 500";	ilist<metadataitem> metadata = new list<metadataitem> { new metadataitem("key1", "test1"), new metadataitem("key2", "test2") };	cloudjobschedule jobschedule = batchcli.jobscheduleoperations.createjobschedule(jobscheduleid, null, null);	timespan firstrecurrenceinterval = timespan.fromminutes(2);	jobschedule.schedule = new schedule() { recurrenceinterval = firstrecurrenceinterval };	poolinformation poolinfo = new poolinformation() {	poolid = this.poolfixture.poolid };	jobschedule.jobspecification = new jobspecification(poolinfo) {	priority = jobschedulepriority, jobmanagertask = new jobmanagertask(jobmanagerid, jobmanagercommandline) };	jobschedule.metadata = metadata;	
 initial job schedule commit 
@@ -1203,6 +1261,8 @@ updating poolinformation
 
 const string newjobmanagercommandline = "ping 127.0.0.1 -n 150";	boundjobschedule.jobspecification.jobmanagertask.commandline = newjobmanagercommandline;	boundjobschedule.commit();	assertjobschedulecorrectness(batchcli.jobscheduleoperations, boundjobschedule, this.poolfixture.poolid, newjobschedulepriority, jobmanagerid, newjobmanagercommandline, recurrenceinterval, metadata);	const string newpoolid = "testpool";	boundjobschedule.jobspecification.poolinformation = new poolinformation() { poolid = newpoolid };	boundjobschedule.commit();	assertjobschedulecorrectness( batchcli.jobscheduleoperations, boundjobschedule, newpoolid, newjobschedulepriority, jobmanagerid, newjobmanagercommandline, recurrenceinterval, metadata);	ilist<metadataitem> newmetadata = new list<metadataitem> { new metadataitem("object", "model") };	boundjobschedule.metadata = newmetadata;	
 updating metadata 
+
+========================= azure_sdk sample_5803 =========================
 
 public list<keyoperationtype> getkeyoperations() {	list<keyoperationtype> keyoperations = new list<keyoperationtype>();	foreach ( var arg in args ) {	var result = new keyoperationtype();	if ( enum.tryparse<keyoperationtype>( arg, true, out result ) ) {	keyoperations.add( result );	}	}	if ( keyoperations.count == 0 ) {	
 no operation is provided executing all the key and secret operations 
@@ -1245,6 +1305,8 @@ is not provided
 
 public string getsecretversion() {	var tag = "-secretversion";	string version = getargumentvalue( tag );	if ( version == string.empty ) {	
 is not provided 
+
+========================= azure_sdk sample_2140 =========================
 
 public static void assertisbatchexceptionandhascorrectazureerrorcode(exception ex, string correctcode, itestoutputhelper outputhelper) {	exception theoneinner = ex;	if (ex is aggregateexception) {	aggregateexception ae = (aggregateexception)ex;	assert.equal<int>(1, ae.innerexceptions.count);	theoneinner = ae.innerexceptions[0];	}	if (!(theoneinner is microsoft.azure.batch.common.batchexception)) {	
 assertisbatchexceptionandhascorrectazureerrorcode incorrect exception 
@@ -1495,8 +1557,12 @@ stdout
 cloudjob boundjob = batchcli.joboperations.getjob(jobid);	boundjob.addtask(hwtask);	utilities utilities = batchcli.utilities;	taskstatemonitor taskstatemonitor = utilities.createtaskstatemonitor();	taskstatemonitor.waitall( boundjob.listtasks(), taskstate.completed, timespan.fromminutes(3));	cloudtask mycompletedtask = new list<cloudtask>(boundjob.listtasks(null))[0];	string stdout = mycompletedtask.getnodefile(constants.standardoutfilename).readasstring();	string stderr = mycompletedtask.getnodefile(constants.standarderrorfilename).readasstring();	assert.contains("hello world", stdout);	testoutputhelper.writeline(stdout);	
 stderr 
 
+========================= azure_sdk sample_5823 =========================
+
 private static void generatemodelfiles() {	var inputfolder = path.combine(getsourcedirectory(), @"spec");	var inputpattern = "*.json";	var model = new filereader(inputfolder, inputpattern).readtypes();	var seen = new hashset<string>();	foreach (var type in model.types) {	if (seen.contains(type.name)) {	
 duplicate type type name 
+
+========================= azure_sdk sample_5782 =========================
 
 var specificartifact = artifacts[typeof(filetostage)];	sequentialfilestagingartifact sfsa = specificartifact as sequentialfilestagingartifact;	assert.notnull(sfsa);	testutilities.assertthrows<invalidoperationexception>(() => mytask.filestostage = new list<ifilestagingprovider>());	cloudpool boundpool = batchcli.pooloperations.getpool(boundjob.executioninformation.poolid);	utilities utilities = batchcli.utilities;	taskstatemonitor taskstatemonitor = utilities.createtaskstatemonitor();	taskstatemonitor.waitall( boundjob.listtasks(), microsoft.azure.batch.common.taskstate.completed, timespan.fromminutes(10), controlparams: null, additionalbehaviors: new[]	{	new microsoft.azure.batch.protocol.requestinterceptor((x) => {	
 issuing request type 
@@ -1551,4 +1617,6 @@ poolstatistics resourcestatistics avgmemory
 
 public void bug1771070_1771072_jobandpoollifetimestats() {	action test = () => {	using (batchclient batchcli = testutilities.openbatchclientasync(testutilities.getcredentialsfromenvironment()).result) {	jobstatistics jobstatistics = batchcli.joboperations.getalllifetimestatistics();	poolstatistics poolstatistics = batchcli.pooloperations.getalllifetimestatistics();	assert.notnull(jobstatistics);	assert.notnull(poolstatistics);	
 poolstatistics usagestatistics dedicatedcoretime 
+
+========================= azure_sdk sample_5807 =========================
 
